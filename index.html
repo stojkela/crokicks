@@ -235,7 +235,31 @@ select,input[type="text"]{width:100%;padding:9px 10px;border-radius:8px;border:1
   .hero-image img {
     object-fit: contain !important;
   }
+/* FULL FIX: HERO SLIDES IMAGE NOT CUT ON MOBILE */
+.hero-image {
+  width: 100%;
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: unset !important;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#000;
 }
+
+.hero-image img {
+  width: 100%;
+  height: auto !important;
+  object-fit: contain !important;
+  border-radius: 16px;
+}
+
+@media(max-width:760px){
+  .hero-image {
+    padding: 10px 0;
+  }
+}
+
 }
 
 </style>
@@ -255,10 +279,6 @@ select,input[type="text"]{width:100%;padding:9px 10px;border-radius:8px;border:1
     </div>
   </header>
 
-  <div class="promo-bar">
-    <span>🎉 Kod za popust:</span> <span class="promo-code">CRO10</span>
-    <span>– 10€ na narudžbe iznad 150€ (WhatsApp / e-mail)</span>
-  </div>
 
   <!-- HERO CAROUSEL -->
   <section class="hero" id="hero">
@@ -998,5 +1018,6 @@ applyFilters();
 </script>
 </body>
 </html>
+
 
 
