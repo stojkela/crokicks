@@ -11,98 +11,111 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--white);-webkit-font-smoothing:antialiased;}
-.wrap{max-width:1100px;margin:0 auto;padding:16px 16px 40px;}
-header{display:flex;align-items:center;gap:16px;padding:20px 0 12px;}
-.logo{width:64px;height:64px;border-radius:12px;background:#111;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 8px var(--shadow);transition:transform .2s;}
-.logo:hover{transform:scale(1.05);}
-.brand{font-weight:700;font-size:24px;}
-p.lead{color:var(--muted);margin-top:4px;font-size:14px;}
-.promo-bar{background:#111;border-radius:999px;padding:8px 16px;font-size:13px;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:16px;}
+.wrap{max-width:1100px;margin:0 auto;padding:16px 16px 56px;}
+header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 10px;}
+.logo-wrap{display:flex;align-items:center;gap:12px;}
+.logo{width:56px;height:56px;border-radius:12px;background:#111;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 8px var(--shadow);}
+.logo img{width:100%;height:100%;object-fit:cover;border-radius:10px;}
+.brand{font-weight:700;font-size:22px;}
+p.lead{color:var(--muted);margin-top:2px;font-size:13px;}
+.header-link a{color:var(--white);text-decoration:none;font-size:13px;opacity:.85;}
+.header-link a:hover{text-decoration:underline;}
+
+.promo-bar{background:#111;border-radius:999px;padding:8px 14px;font-size:13px;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:14px;}
 .promo-code{color:var(--accent);font-weight:600;}
 
 /* HERO CAROUSEL */
-.hero{position:relative;border-radius:18px;overflow:hidden;margin-bottom:24px;background:linear-gradient(135deg,#151515,#101a15);}
+.hero{position:relative;border-radius:18px;overflow:hidden;margin-bottom:18px;background:linear-gradient(135deg,#151515,#101a15);min-height:260px;box-shadow:0 8px 26px var(--shadow);}
 .hero-inner{position:relative;width:100%;height:100%;}
 .hero-slides{position:relative;width:100%;height:100%;min-height:260px;}
-.hero-slide{position:absolute;inset:0;display:flex;flex-direction:column;gap:16px;padding:18px;opacity:0;pointer-events:none;transition:opacity .6s ease;}
+.hero-slide{position:absolute;inset:0;display:flex;flex-direction:column;gap:14px;padding:18px;opacity:0;pointer-events:none;transition:opacity .6s ease;}
 .hero-slide.active{opacity:1;pointer-events:auto;}
 .hero-main{display:flex;flex-direction:column;gap:8px;z-index:2;position:relative;}
-.hero-title{font-size:24px;font-weight:700;}
-.hero-text{color:var(--muted);font-size:14px;max-width:460px;}
-.hero-tags{display:flex;flex-wrap:wrap;gap:8px;font-size:11px;margin-top:4px;}
-.hero-tag{background:#111;border-radius:999px;padding:4px 10px;color:var(--muted);}
-.hero-cta{margin-top:8px;display:flex;gap:10px;flex-wrap:wrap;}
-.btn-hero{padding:10px 16px;border-radius:999px;border:none;font-weight:600;cursor:pointer;font-size:14px;transition:.2s;}
+.hero-title{font-size:22px;font-weight:700;}
+.hero-text{color:var(--muted);font-size:13px;max-width:460px;}
+.hero-tags{display:flex;flex-wrap:wrap;gap:6px;font-size:11px;margin-top:4px;}
+.hero-tag{background:#111;border-radius:999px;padding:4px 9px;color:var(--muted);}
+.hero-cta{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;}
+.btn-hero{padding:9px 14px;border-radius:999px;border:none;font-weight:600;cursor:pointer;font-size:13px;transition:.2s;}
 .btn-hero-primary{background:var(--accent);color:#06110a;}
 .btn-hero-primary:hover{opacity:.9;}
 .btn-hero-secondary{background:transparent;border:1px solid rgba(255,255,255,.15);color:var(--white);}
 .btn-hero-secondary:hover{background:rgba(255,255,255,.06);}
-.hero-image-wrap{margin-top:10px;}
-.hero-image{border-radius:18px;overflow:hidden;background:#202020;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;}
+.hero-image-wrap{margin-top:6px;}
+.hero-image{border-radius:16px;overflow:hidden;background:#202020;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;}
 .hero-image img{width:100%;height:100%;object-fit:cover;}
-.hero-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;}
-.hero-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.25);cursor:pointer;transition:.2s;}
+.hero-dots{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:5px;}
+.hero-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.24);cursor:pointer;transition:.2s;}
 .hero-dot.active{background:var(--accent);}
 
 @media(min-width:780px){
-  .hero-slide{flex-direction:row;align-items:center;justify-content:space-between;}
+  .hero-slide{flex-direction:row;align-items:center;justify-content:space-between;padding:18px 20px;}
   .hero-image-wrap{flex:0 0 260px;margin-top:0;}
+  .hero-title{font-size:26px;}
+  .hero-text{font-size:14px;}
 }
 
-/* toolbar */
-.toolbar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;align-items:center;}
-.toolbar-group{display:flex;gap:8px;flex:1 1 160px;}
+/* TOOLBAR */
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center;}
+.toolbar-group{flex:1 1 100%;}
+.toolbar-group.half{flex:1 1 calc(50% - 4px);}
 .toolbar input[type="search"], .toolbar select{
-  width:100%;padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);
+  width:100%;padding:9px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.12);
   background:#101010;color:var(--white);font-size:13px;
 }
+@media(min-width:720px){
+  .toolbar-group.search{flex:2;}
+  .toolbar-group.half{flex:1;}
+}
 
-/* grid / cards */
-.grid{display:grid;grid-template-columns:1fr;gap:20px;}
-@media(min-width:600px){.grid{grid-template-columns:repeat(2,1fr);}}
-@media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr);}}
-.card{background:var(--card);padding:16px;border-radius:16px;display:flex;flex-direction:column;gap:12px;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 4px 12px var(--shadow);}
-.card:hover{transform:translateY(-4px);box-shadow:0 8px 20px var(--shadow);}
-.img{width:100%;aspect-ratio:1/1;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#202020;}
-.img img{width:100%;height:100%;object-fit:cover;border-radius:8px;transition:transform 0.3s;}
-.img img:hover{transform:scale(1.05);}
+/* GRID / CARDS */
+.grid{display:grid;grid-template-columns:1fr;gap:18px;}
+@media(min-width:650px){.grid{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:980px){.grid{grid-template-columns:repeat(3,1fr);}}
+
+.card{background:var(--card);padding:14px;border-radius:18px;display:flex;flex-direction:column;gap:10px;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 4px 14px var(--shadow);}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 20px var(--shadow);}
+.img{width:100%;border-radius:14px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#202020;}
+.img img{width:100%;height:100%;object-fit:cover;border-radius:12px;transition:transform 0.3s;}
+.img img:hover{transform:scale(1.03);}
 h3{font-size:18px;font-weight:600;margin-top:4px;}
 .meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px;}
-.price{font-weight:700;color:var(--white);}
+.price{font-weight:700;color:var(--white);font-size:16px;}
 .badges{display:flex;gap:6px;flex-wrap:wrap;font-size:11px;}
 .badge{background:#111;padding:3px 8px;border-radius:999px;color:var(--muted);}
 .badge-hot{background:#2c1818;color:#ffb3b3;}
 .badge-new{background:#182627;color:#7ce0c7;}
-.actions{display:flex;gap:10px;margin-top:auto;}
+.actions{display:flex;gap:8px;margin-top:auto;}
 .btn{flex:1;padding:10px 0;border-radius:12px;border:none;font-weight:600;cursor:pointer;transition:all 0.2s;font-size:14px;}
 .btn-order{background:var(--accent);color:#06110a;}
-.btn-order:hover{opacity:0.85;}
+.btn-order:hover{opacity:0.9;}
 .btn-info{background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--white);}
 .btn-info:hover{background:rgba(255,255,255,0.05);}
 
-/* why section */
-.why{margin-top:28px;margin-bottom:12px;display:grid;gap:12px;}
+/* WHY SECTION */
+.why{margin-top:24px;margin-bottom:8px;display:grid;gap:12px;}
 @media(min-width:800px){.why{grid-template-columns:repeat(3,1fr);}}
-.why-card{background:#111212;border-radius:14px;padding:14px;}
-.why-title{font-size:14px;font-weight:600;margin-bottom:4px;}
+.why-card{background:#111212;border-radius:14px;padding:12px 13px;}
+.why-title{font-size:14px;font-weight:600;margin-bottom:3px;}
 .why-text{font-size:13px;color:var(--muted);}
 
-footer{margin-top:32px;text-align:center;font-size:13px;color:var(--muted);}
+/* FOOTER */
+footer{margin-top:26px;text-align:center;font-size:13px;color:var(--muted);}
 
-/* modal order */
+/* MODAL ORDER */
 .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);z-index:200;padding:20px;overflow:auto;}
-.modal .box{width:100%;max-width:480px;background:var(--card);padding:24px;border-radius:16px;box-shadow:0 8px 24px var(--shadow);}
+.modal .box{width:100%;max-width:480px;background:var(--card);padding:20px;border-radius:16px;box-shadow:0 8px 24px var(--shadow);}
 label{font-size:13px;color:var(--muted);margin-bottom:6px;display:block;}
-select,input[type="text"]{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:var(--bg);color:var(--white);margin-bottom:12px;font-size:14px;}
+select,input[type="text"]{width:100%;padding:9px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:#0b0b0b;color:var(--white);margin-bottom:10px;font-size:14px;}
 .small{font-size:13px;color:var(--muted);margin-top:4px;}
 .link{color:var(--accent);text-decoration:none;}
 .link:hover{text-decoration:underline;}
 
-/* product detail overlay */
+/* PRODUCT DETAIL OVERLAY */
 .detail-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.9);display:none;z-index:110;padding:20px;overflow:auto;}
-.detail-inner{max-width:1100px;margin:0 auto;background:#111214;border-radius:18px;padding:18px 18px 72px;position:relative;}
-.detail-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
-.detail-layout{display:flex;flex-direction:column;gap:18px;}
+.detail-inner{max-width:1100px;margin:0 auto;background:#111214;border-radius:18px;padding:16px 16px 70px;position:relative;}
+.detail-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.detail-layout{display:flex;flex-direction:column;gap:16px;}
 @media(min-width:900px){
   .detail-layout{flex-direction:row;align-items:flex-start;}
   .detail-left{flex:1.1;}
@@ -110,35 +123,51 @@ select,input[type="text"]{width:100%;padding:10px;border-radius:8px;border:1px s
 }
 #mainImage{border-radius:14px;overflow:hidden;background:#202020;}
 #mainImage img{width:100%;border-radius:14px;max-height:460px;object-fit:cover;}
-.gallery{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+.gallery{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;}
 .gallery img{width:calc(25% - 6px);border-radius:8px;object-fit:cover;cursor:pointer;opacity:.9;transition:transform .2s,opacity .2s;}
 .gallery img:hover{transform:scale(1.04);opacity:1;}
-.sizes{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0;}
+.sizes{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0;}
 .sizes span{background:#1b1b1b;padding:6px 10px;border-radius:8px;font-size:13px;cursor:pointer;border:1px solid transparent;}
 .sizes span.selected{border-color:var(--accent);background:#122017;}
-.detail-price{font-size:22px;font-weight:700;margin:4px 0;}
+.detail-price{font-size:22px;font-weight:700;margin:2px 0;}
 .detail-meta{font-size:13px;color:var(--muted);}
-.detail-section-title{font-size:14px;font-weight:600;margin-top:16px;margin-bottom:6px;}
-.detail-recs{display:flex;flex-wrap:wrap;gap:10px;font-size:13px;}
-.detail-rec-item{background:#181818;padding:8px 10px;border-radius:8px;cursor:pointer;}
+.detail-section-title{font-size:14px;font-weight:600;margin-top:12px;margin-bottom:4px;}
+.detail-recs{display:flex;flex-wrap:wrap;gap:8px;font-size:13px;}
+.detail-rec-item{background:#181818;padding:7px 9px;border-radius:8px;cursor:pointer;}
 .detail-rec-item:hover{background:#1f1f1f;}
 .detail-reviews{font-size:13px;color:var(--muted);}
-.detail-reviews p{margin-bottom:6px;}
+.detail-reviews p{margin-bottom:4px;}
 
-/* sticky bar */
-.detail-sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(5,5,5,0.95);border-top:1px solid rgba(255,255,255,0.08);padding:10px 16px;display:none;z-index:120;}
+/* STICKY BAR ZA DETALJE */
+.detail-sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(5,5,5,0.95);border-top:1px solid rgba(255,255,255,0.08);padding:8px 16px;display:none;z-index:120;}
 .detail-sticky-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:10px;}
 .detail-sticky-price{font-weight:600;}
-.detail-sticky button{padding:8px 18px;border-radius:999px;border:none;background:var(--accent);color:#06110a;font-weight:600;cursor:pointer;font-size:14px;}
+.detail-sticky button{padding:8px 16px;border-radius:999px;border:none;background:var(--accent);color:#06110a;font-weight:600;cursor:pointer;font-size:14px;}
+
+/* MOBILE TWEAKS */
+@media(max-width:760px){
+  header{flex-direction:column;align-items:flex-start;}
+  .hero-slide{padding:16px 14px;}
+  .hero-title{font-size:20px;}
+  .hero-text{font-size:13px;}
+  .card{padding:14px;}
+  .card h3{font-size:17px;}
+  .modal .box{width:96%;margin-top:10px;}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <div class="logo"><img src="https://via.placeholder.com/56x56?text=CK" alt="logo" style="width:52px;height:52px;border-radius:8px"></div>
-    <div>
-      <div class="brand">CRO.KICKS</div>
-      <p class="lead">Premium footwear — Dostava oko 2 tjedna • Osobno preuzimanje Zagreb</p>
+    <div class="logo-wrap">
+      <div class="logo"><img src="slike/logo.png" alt="CRO.KICKS"></div>
+      <div>
+        <div class="brand">CRO.KICKS</div>
+        <p class="lead">Premium footwear — Dostava oko 2 tjedna • Osobno preuzimanje Zagreb</p>
+      </div>
+    </div>
+    <div class="header-link">
+      <a href="https://instagram.com/cro.kicks_" target="_blank">@cro.kicks_</a>
     </div>
   </header>
 
@@ -155,7 +184,7 @@ select,input[type="text"]{width:100%;padding:10px;border-radius:8px;border:1px s
         <div class="hero-slide active" data-index="0">
           <div class="hero-main">
             <div class="hero-title">Yeezy, Jordan i hype modeli na jednom mjestu.</div>
-            <div class="hero-text">Provjereni dobavljači, reference fotke prije slanja i jednostavna narudžba preko WhatsApp-a. CRO.KICKS — tvoja plug-in za tenisice.</div>
+            <div class="hero-text">Provjereni dobavljači, reference fotke prije slanja i jednostavna narudžba preko WhatsApp-a.</div>
             <div class="hero-tags">
               <span class="hero-tag">🔥 Yeezy 350 Zebra</span>
               <span class="hero-tag">👟 Jordan 4 Military / Black Cat</span>
@@ -176,7 +205,7 @@ select,input[type="text"]{width:100%;padding:10px;border-radius:8px;border:1px s
         <div class="hero-slide" data-index="1">
           <div class="hero-main">
             <div class="hero-title">Realne slike para koji ide baš tebi.</div>
-            <div class="hero-text">Za svaki par šaljemo fotke od dobavljača prije slanja, plus dodatne slike na zahtjev. Nema iznenađenja.</div>
+            <div class="hero-text">Za svaki par šaljemo fotke od dobavljača prije slanja + dodatne slike na zahtjev.</div>
             <div class="hero-tags">
               <span class="hero-tag">📸 Reference fotke</span>
               <span class="hero-tag">✅ Provjereni dobavljači</span>
@@ -197,11 +226,11 @@ select,input[type="text"]{width:100%;padding:10px;border-radius:8px;border:1px s
         <div class="hero-slide" data-index="2">
           <div class="hero-main">
             <div class="hero-title">Osobno preuzimanje u Zagrebu ili dostava na adresu.</div>
-            <div class="hero-text">Ako si iz Zagreba, možemo se dogovoriti za osobno preuzimanje. Inače šaljemo pouzdanim dostavnim službama.</div>
+            <div class="hero-text">Ako si iz Zagreba, možemo se dogovoriti za osobno preuzimanje. Inače šaljemo dostavom diljem Hrvatske.</div>
             <div class="hero-tags">
               <span class="hero-tag">📍 Zagreb pickup</span>
               <span class="hero-tag">🚚 Dostava Hrvatska</span>
-              <span class="hero-tag">💶 Plaćanje pouzećem / dogovor</span>
+              <span class="hero-tag">💶 Plaćanje po dogovoru</span>
             </div>
             <div class="hero-cta">
               <button class="btn-hero btn-hero-primary" onclick="scrollToCatalog()">Pogledaj ponudu</button>
@@ -225,10 +254,10 @@ select,input[type="text"]{width:100%;padding:10px;border-radius:8px;border:1px s
 
   <!-- Toolbar -->
   <section class="toolbar">
-    <div class="toolbar-group" style="flex:2">
+    <div class="toolbar-group search">
       <input type="search" id="searchInput" placeholder="Pretraži modele (npr. Yeezy, Jordan, Dunk...)" oninput="applyFilters()" />
     </div>
-    <div class="toolbar-group">
+    <div class="toolbar-group half">
       <select id="brandFilter" onchange="applyFilters()">
         <option value="">Brand (sve)</option>
         <option value="yeezy">Yeezy</option>
@@ -238,7 +267,7 @@ select,input[type="text"]{width:100%;padding:10px;border-radius:8px;border:1px s
         <option value="adidas">Adidas</option>
       </select>
     </div>
-    <div class="toolbar-group">
+    <div class="toolbar-group half">
       <select id="sizeFilter" onchange="applyFilters()">
         <option value="">Veličina (sve)</option>
         <option>36</option><option>37</option><option>38</option><option>39</option>
@@ -508,11 +537,11 @@ select,input[type="text"]{width:100%;padding:10px;border-radius:8px;border:1px s
       </div>
       <div class="why-card">
         <div class="why-title">Direktna komunikacija</div>
-        <div class="why-text">WhatsApp: savjet oko veličine, dodatne fotke, informacije o dostupnosti i dogovor oko preuzimanja/dostave.</div>
+        <div class="why-text">WhatsApp: savjet oko veličine, dodatne fotke, dostupnost modela i dogovor oko preuzimanja/dostave.</div>
       </div>
       <div class="why-card">
         <div class="why-title">Fokus na repeat kupce</div>
-        <div class="why-text">Ako si zadovoljan, vraćaš se. Ako ikad bude problem, rješavamo ga individualno i fer.</div>
+        <div class="why-text">Ako si zadovoljan, vraćaš se. Ako ikad bude problem, rješavamo ga individualno i fer pristupom.</div>
       </div>
     </section>
   </main>
@@ -525,7 +554,7 @@ select,input[type="text"]{width:100%;padding:10px;border-radius:8px;border:1px s
 <!-- MODAL NARUDŽBA -->
 <div class="modal" id="orderModal">
   <div class="box">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
       <strong id="orderTitle">Naruči</strong>
       <button onclick="closeOrder()" style="background:transparent;border:none;color:var(--muted);font-size:18px">✕</button>
     </div>
@@ -556,12 +585,12 @@ select,input[type="text"]{width:100%;padding:10px;border-radius:8px;border:1px s
 
       <div class="small">Klikom na "Pošalji WhatsApp" otvara se chat s unaprijed popunjenom porukom (model, veličina i adresa).</div>
 
-      <div style="display:flex;gap:8px;margin-top:12px">
+      <div style="display:flex;gap:8px;margin-top:10px">
         <button class="btn btn-order" style="flex:1" onclick="sendWhatsApp()">Pošalji WhatsApp</button>
         <button class="btn btn-info" style="flex:1" onclick="sendEmail()">Pošalji e-mail</button>
       </div>
 
-      <div style="margin-top:10px;text-align:center">
+      <div style="margin-top:8px;text-align:center">
         Ili pošalji Instagram DM: <a class="link" href="https://instagram.com/cro.kicks_" target="_blank">@cro.kicks_</a>
       </div>
     </div>
@@ -601,7 +630,7 @@ select,input[type="text"]{width:100%;padding:10px;border-radius:8px;border:1px s
           <p>⭐️⭐️⭐️⭐️ “Stiglo za oko 2 tjedna, Jordan 4 su brutalne. Uzet ću opet sigurno.”</p>
         </div>
 
-        <div style="margin-top:18px;display:flex;gap:8px;flex-wrap:wrap">
+        <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap">
           <button class="btn btn-order" onclick="orderFromDetail()">Naruči ovaj model</button>
           <button class="btn btn-info" onclick="openWhatsAppGeneral()">Pitaj za dodatne slike</button>
         </div>
@@ -622,7 +651,7 @@ select,input[type="text"]{width:100%;padding:10px;border-radius:8px;border:1px s
 </div>
 
 <script>
-const WA_PHONE = '385955286672'; // tvoj broj za WhatsApp (0955286672 -> 385955286672)
+const WA_PHONE = '385955286672'; // 0955286672 u WA formatu
 const SELLER_EMAIL = 'info@crokicks.hr';
 
 const catalogEl = document.getElementById('catalog');
