@@ -226,6 +226,16 @@ select,input[type="text"]{width:100%;padding:9px 10px;border-radius:8px;border:1
   .why {
     margin-top: 18px !important;
   }
+
+  @media(max-width: 760px){
+  .hero-image {
+    aspect-ratio: 4/3 !important;
+    max-height: 260px;
+  }
+  .hero-image img {
+    object-fit: contain !important;
+  }
+}
 }
 
 </style>
@@ -988,4 +998,5 @@ applyFilters();
 </script>
 </body>
 </html>
+
 
