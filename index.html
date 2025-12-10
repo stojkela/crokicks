@@ -5,101 +5,242 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>CRO.KICKS — Katalog</title>
 <meta name="description" content="CRO.KICKS — katalog tenisica. Dostava ~2 tjedna. Naruči preko WhatsApp/IG." />
+
 <style>
 :root{
-  --bg:#0b0b0b; --card:#141416; --muted:#9aa0a6; --accent:#23b26b; --white:#fff; --shadow: rgba(0,0,0,0.5);
+  --bg:#0b0b0b;
+  --card:#141416;
+  --muted:#9aa0a6;
+  --accent:#23b26b;
+  --white:#fff;
+  --shadow: rgba(0,0,0,0.5);
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--white);-webkit-font-smoothing:antialiased;}
-.wrap{max-width:1100px;margin:0 auto;padding:16px 16px 56px;}
-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 10px;}
-.logo-wrap{display:flex;align-items:center;gap:12px;}
-.logo{width:56px;height:56px;border-radius:12px;background:#111;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 8px var(--shadow);}
-.logo img{width:100%;height:100%;object-fit:cover;border-radius:10px;}
-.brand{font-weight:700;font-size:22px;}
-p.lead{color:var(--muted);margin-top:2px;font-size:13px;}
-.header-link a{color:var(--white);text-decoration:none;font-size:13px;opacity:.85;}
-.header-link a:hover{text-decoration:underline;}
-
-.promo-bar{background:#111;border-radius:999px;padding:8px 14px;font-size:13px;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:14px;}
-.promo-code{color:var(--accent);font-weight:600;}
-
-/* HERO CAROUSEL */
-.hero {
-  position:relative;
-  border-radius:18px;
-  overflow:hidden;
-  margin-bottom:18px;
-  background:#0b0b0b; /* čisto, bez prelaza */
-  padding:0;
-  box-shadow:0 8px 26px var(--shadow);
+body{
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--white);
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{
+  max-width:1100px;
+  margin:0 auto;
+  padding:12px 16px 64px;
 }
 
+/* HEADER */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:8px 0 10px;
+}
+.logo-wrap{display:flex;align-items:center;gap:12px;}
+.logo{
+  width:56px;height:56px;border-radius:12px;background:#111;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 8px var(--shadow);
+}
+.logo img{width:100%;height:100%;object-fit:cover;border-radius:10px;}
+.brand{font-weight:700;font-size:24px;letter-spacing:.03em;}
+p.lead{color:var(--muted);margin-top:2px;font-size:13px;}
+.header-link{
+  font-size:13px;
+  color:var(--muted);
+}
+.header-link a{color:var(--white);text-decoration:none;font-weight:500;}
+.header-link a:hover{text-decoration:underline;}
 
+@media(max-width:640px){
+  header{flex-direction:column;align-items:flex-start;gap:6px;}
+}
+
+/* HERO CAROUSEL */
+.hero{
+  position:relative;
+  border-radius:20px;
+  overflow:hidden;
+  margin-top:10px;
+  margin-bottom:18px;
+  background:#050505;
+  box-shadow:0 8px 26px var(--shadow);
+}
 .hero-inner{position:relative;width:100%;height:100%;}
 .hero-slides{position:relative;width:100%;height:100%;min-height:260px;}
-.hero-slide{position:absolute;inset:0;display:flex;flex-direction:column;gap:14px;padding:18px;opacity:0;pointer-events:none;transition:opacity .6s ease;}
+.hero-slide{
+  position:absolute;inset:0;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  padding:16px 16px 18px;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .6s ease;
+}
 .hero-slide.active{opacity:1;pointer-events:auto;}
-.hero-main{display:flex;flex-direction:column;gap:8px;z-index:2;position:relative;}
-.hero-title{font-size:22px;font-weight:700;}
-.hero-text{color:var(--muted);font-size:13px;max-width:460px;}
-.hero-tags{display:flex;flex-wrap:wrap;gap:6px;font-size:11px;margin-top:4px;}
-.hero-tag{background:#111;border-radius:999px;padding:4px 9px;color:var(--muted);}
-.hero-cta{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;}
-.btn-hero{padding:9px 14px;border-radius:999px;border:none;font-weight:600;cursor:pointer;font-size:13px;transition:.2s;}
+
+.hero-main{display:flex;flex-direction:column;gap:10px;z-index:2;position:relative;}
+.hero-title{
+  font-size:24px;
+  font-weight:800;
+  letter-spacing:.01em;
+}
+.hero-text{
+  color:var(--muted);
+  font-size:13px;
+  max-width:520px;
+}
+.hero-tags{
+  display:flex;flex-wrap:wrap;gap:6px;
+  font-size:11px;margin-top:4px;
+}
+.hero-tag{
+  background:#111;border-radius:999px;
+  padding:4px 9px;color:var(--muted);
+}
+.hero-cta{
+  margin-top:8px;
+  display:flex;gap:8px;flex-wrap:wrap;
+}
+.btn-hero{
+  padding:9px 14px;border-radius:999px;
+  border:none;font-weight:600;cursor:pointer;
+  font-size:13px;transition:.18s;
+}
 .btn-hero-primary{background:var(--accent);color:#06110a;}
 .btn-hero-primary:hover{opacity:.9;}
-.btn-hero-secondary{background:transparent;border:1px solid rgba(255,255,255,.15);color:var(--white);}
+.btn-hero-secondary{
+  background:transparent;
+  border:1px solid rgba(255,255,255,.18);
+  color:var(--white);
+}
 .btn-hero-secondary:hover{background:rgba(255,255,255,.06);}
-.hero-image-wrap{margin-top:6px;}
-.hero-image{border-radius:16px;overflow:hidden;background:#202020;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;}
-.hero-image img{width:100%;height:100%;object-fit:contain;}
-.hero-dots{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:5px;}
-.hero-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.24);cursor:pointer;transition:.2s;}
-.hero-dot.active{background:var(--accent);}
+
+/* HERO IMAGE */
+.hero-image-wrap{margin-top:8px;}
+.hero-image{
+  width:100%;
+  border-radius:18px;
+  background:radial-gradient(circle at top,#1b1b1b 0,#050505 65%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:6px;
+}
+.hero-image img{
+  width:100%;
+  height:auto;
+  max-height:320px;
+  object-fit:contain;
+  border-radius:16px;
+}
+
+/* DOTS */
+.hero-dots{
+  position:absolute;
+  bottom:8px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:6px;
+}
+.hero-dot{
+  width:7px;height:7px;border-radius:999px;
+  background:rgba(255,255,255,.24);
+  cursor:pointer;transition:.2s;
+}
+.hero-dot.active{background:var(--accent);width:16px;}
 
 @media(min-width:780px){
-  .hero-slide{flex-direction:row;align-items:center;justify-content:space-between;padding:18px 20px;}
-  .hero-image-wrap{flex:0 0 260px;margin-top:0;}
-  .hero-title{font-size:26px;}
+  .hero-slide{
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 22px;
+  }
+  .hero-main{flex:1.1;}
+  .hero-image-wrap{flex:0 0 280px;margin-top:0;}
+  .hero-title{font-size:28px;}
   .hero-text{font-size:14px;}
+  .hero-image img{max-height:360px;}
 }
 
 /* TOOLBAR */
-.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;align-items:center;}
+.toolbar{
+  display:flex;flex-wrap:wrap;gap:8px;
+  margin-bottom:14px;align-items:center;
+}
 .toolbar-group{flex:1 1 100%;}
 .toolbar-group.half{flex:1 1 calc(50% - 4px);}
 .toolbar input[type="search"], .toolbar select{
-  width:100%;padding:9px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.12);
+  width:100%;padding:10px 13px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
   background:#101010;color:var(--white);font-size:13px;
 }
+.toolbar input::placeholder{color:#6f7378;}
 @media(min-width:720px){
   .toolbar-group.search{flex:2;}
   .toolbar-group.half{flex:1;}
 }
 
 /* GRID / CARDS */
-.grid{display:grid;grid-template-columns:1fr;gap:18px;}
+.grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+}
 @media(min-width:650px){.grid{grid-template-columns:repeat(2,1fr);}}
 @media(min-width:980px){.grid{grid-template-columns:repeat(3,1fr);}}
 
-.card{background:var(--card);padding:14px;border-radius:18px;display:flex;flex-direction:column;gap:10px;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 4px 14px var(--shadow);}
+/* PRODUCT CARD */
+.card{
+  background:var(--card);
+  padding:14px;
+  border-radius:18px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  transition:transform 0.18s,box-shadow 0.18s;
+  box-shadow:0 4px 14px var(--shadow);
+}
 .card:hover{transform:translateY(-3px);box-shadow:0 8px 20px var(--shadow);}
-.img{width:100%;border-radius:14px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#202020;}
-.img img{width:100%;height:100%;object-fit:cover;border-radius:12px;transition:transform 0.3s;}
+.img{
+  width:100%;
+  border-radius:14px;
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  background:#202020;
+}
+.img img{
+  width:100%;height:100%;
+  object-fit:cover;
+  border-radius:12px;
+  transition:transform 0.28s;
+}
 .img img:hover{transform:scale(1.03);}
 h3{font-size:18px;font-weight:600;margin-top:4px;}
-.meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px;}
+.meta{
+  display:flex;justify-content:space-between;align-items:center;
+  color:var(--muted);font-size:13px;
+}
 .price{font-weight:700;color:var(--white);font-size:16px;}
 .badges{display:flex;gap:6px;flex-wrap:wrap;font-size:11px;}
 .badge{background:#111;padding:3px 8px;border-radius:999px;color:var(--muted);}
 .badge-hot{background:#2c1818;color:#ffb3b3;}
 .badge-new{background:#182627;color:#7ce0c7;}
 .actions{display:flex;gap:8px;margin-top:auto;}
-.btn{flex:1;padding:10px 0;border-radius:12px;border:none;font-weight:600;cursor:pointer;transition:all 0.2s;font-size:14px;}
+.btn{
+  flex:1;padding:10px 0;border-radius:12px;border:none;
+  font-weight:600;cursor:pointer;transition:all 0.18s;font-size:14px;
+}
 .btn-order{background:var(--accent);color:#06110a;}
 .btn-order:hover{opacity:0.9;}
-.btn-info{background:transparent;border:1px solid rgba(255,255,255,0.15);color:var(--white);}
+.btn-info{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.15);
+  color:var(--white);
+}
 .btn-info:hover{background:rgba(255,255,255,0.05);}
 
 /* WHY SECTION */
@@ -111,20 +252,45 @@ h3{font-size:18px;font-weight:600;margin-top:4px;}
 
 /* FOOTER */
 footer{margin-top:26px;text-align:center;font-size:13px;color:var(--muted);}
-
-/* MODAL ORDER */
-.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);z-index:200;padding:20px;overflow:auto;}
-.modal .box{width:100%;max-width:480px;background:var(--card);padding:20px;border-radius:16px;box-shadow:0 8px 24px var(--shadow);}
-label{font-size:13px;color:var(--muted);margin-bottom:6px;display:block;}
-select,input[type="text"]{width:100%;padding:9px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:#0b0b0b;color:var(--white);margin-bottom:10px;font-size:14px;}
-.small{font-size:13px;color:var(--muted);margin-top:4px;}
 .link{color:var(--accent);text-decoration:none;}
 .link:hover{text-decoration:underline;}
 
+/* MODAL NARUDŽBA */
+.modal{
+  position:fixed;inset:0;display:none;
+  align-items:center;justify-content:center;
+  background:rgba(0,0,0,0.7);
+  z-index:200;padding:20px;overflow:auto;
+}
+.modal .box{
+  width:100%;max-width:480px;
+  background:var(--card);
+  padding:20px;border-radius:16px;
+  box-shadow:0 8px 24px var(--shadow);
+}
+label{font-size:13px;color:var(--muted);margin-bottom:6px;display:block;}
+select,input[type="text"]{
+  width:100%;padding:9px 10px;border-radius:8px;
+  border:1px solid rgba(255,255,255,0.1);
+  background:#0b0b0b;color:var(--white);
+  margin-bottom:10px;font-size:14px;
+}
+.small{font-size:13px;color:var(--muted);margin-top:4px;}
+
 /* PRODUCT DETAIL OVERLAY */
-.detail-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.9);display:none;z-index:110;padding:20px;overflow:auto;}
-.detail-inner{max-width:1100px;margin:0 auto;background:#111214;border-radius:18px;padding:16px 16px 70px;position:relative;}
-.detail-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.detail-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,0.9);
+  display:none;z-index:110;padding:20px;overflow:auto;
+}
+.detail-inner{
+  max-width:1100px;margin:0 auto;
+  background:#111214;border-radius:18px;
+  padding:16px 16px 70px;position:relative;
+}
+.detail-header{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:10px;
+}
 .detail-layout{display:flex;flex-direction:column;gap:16px;}
 @media(min-width:900px){
   .detail-layout{flex-direction:row;align-items:flex-start;}
@@ -132,12 +298,27 @@ select,input[type="text"]{width:100%;padding:9px 10px;border-radius:8px;border:1
   .detail-right{flex:1;max-width:420px;}
 }
 #mainImage{border-radius:14px;overflow:hidden;background:#202020;}
-#mainImage img{width:100%;border-radius:14px;max-height:460px;object-fit:cover;}
-.gallery{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;}
-.gallery img{width:calc(25% - 6px);border-radius:8px;object-fit:cover;cursor:pointer;opacity:.9;transition:transform .2s,opacity .2s;}
+#mainImage img{
+  width:100%;border-radius:14px;
+  max-height:460px;object-fit:cover;
+}
+.gallery{
+  display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;
+}
+.gallery img{
+  width:calc(25% - 6px);
+  border-radius:8px;object-fit:cover;
+  cursor:pointer;opacity:.9;
+  transition:transform .2s,opacity .2s;
+}
 .gallery img:hover{transform:scale(1.04);opacity:1;}
-.sizes{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0;}
-.sizes span{background:#1b1b1b;padding:6px 10px;border-radius:8px;font-size:13px;cursor:pointer;border:1px solid transparent;}
+.sizes{
+  display:flex;gap:8px;flex-wrap:wrap;margin:8px 0;
+}
+.sizes span{
+  background:#1b1b1b;padding:6px 10px;border-radius:8px;
+  font-size:13px;cursor:pointer;border:1px solid transparent;
+}
 .sizes span.selected{border-color:var(--accent);background:#122017;}
 .detail-price{font-size:22px;font-weight:700;margin:2px 0;}
 .detail-meta{font-size:13px;color:var(--muted);}
@@ -149,129 +330,33 @@ select,input[type="text"]{width:100%;padding:9px 10px;border-radius:8px;border:1
 .detail-reviews p{margin-bottom:4px;}
 
 /* STICKY BAR ZA DETALJE */
-.detail-sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(5,5,5,0.95);border-top:1px solid rgba(255,255,255,0.08);padding:8px 16px;display:none;z-index:120;}
-.detail-sticky-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:10px;}
+.detail-sticky{
+  position:fixed;left:0;right:0;bottom:0;
+  background:rgba(5,5,5,0.95);
+  border-top:1px solid rgba(255,255,255,0.08);
+  padding:8px 16px;display:none;z-index:120;
+}
+.detail-sticky-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;justify-content:space-between;
+  align-items:center;gap:10px;
+}
 .detail-sticky-price{font-weight:600;}
-.detail-sticky button{padding:8px 16px;border-radius:999px;border:none;background:var(--accent);color:#06110a;font-weight:600;cursor:pointer;font-size:14px;}
+.detail-sticky button{
+  padding:8px 16px;border-radius:999px;border:none;
+  background:var(--accent);color:#06110a;
+  font-weight:600;cursor:pointer;font-size:14px;
+}
 
 /* MOBILE TWEAKS */
 @media(max-width:760px){
-  header{flex-direction:column;align-items:flex-start;}
-  .hero-slide{padding:16px 14px;}
-  .hero-title{font-size:20px;}
+  .hero-slide{padding:14px 14px 20px;gap:12px;}
+  .hero-title{font-size:22px;}
   .hero-text{font-size:13px;}
-  .card{padding:14px;}
-  .card h3{font-size:17px;}
-  .modal .box{width:96%;margin-top:10px;}
+  .hero-image img{max-height:260px;}
+  .grid{gap:16px;}
+  .card{padding:13px;}
 }
-
-  /* --- MOBITEL FIX --- */
-@media(max-width: 760px) {
-
-  /* HEADER FIX */
-  header {
-    gap: 8px;
-    padding-top: 4px;
-  }
-  .brand { font-size: 26px; }
-  p.lead { font-size: 14px; line-height: 1.3; }
-
-  /* HERO FIX */
-  .hero { 
-    min-height: 200px; 
-    padding: 0;
-  }
-  .hero-slide {
-    padding: 12px !important;
-    gap: 10px;
-  }
-  .hero-title { 
-    font-size: 22px !important; 
-    line-height: 1.25;
-  }
-  .hero-text { 
-    font-size: 14px !important; 
-    line-height: 1.35;
-  }
-  .hero-image {
-    aspect-ratio: 1/1 !important;
-    border-radius: 12px;
-  }
-
-  /* CTA gumbi */
-  .hero-cta {
-    gap: 6px;
-  }
-  .btn-hero {
-    padding: 8px 12px !important;
-    font-size: 12px !important;
-  }
-
-  /* FILTER BAR FIX */
-  .toolbar {
-    margin-top: 6px;
-    gap: 6px;
-  }
-  .toolbar select,
-  .toolbar input[type="search"] {
-    padding: 10px 12px;
-    font-size: 14px;
-  }
-
-  /* GRID FIX */
-  .grid {
-    gap: 14px;
-    margin-top: 10px;
-  }
-
-  /* CARD FIX */
-  .card {
-    padding: 12px !important;
-    gap: 8px !important;
-  }
-  .card h3 { font-size: 18px !important; }
-  .meta { font-size: 13px; }
-
-  /* WHY SECTION */
-  .why {
-    margin-top: 18px !important;
-  }
-
-  @media(max-width: 760px){
-  .hero-image {
-    aspect-ratio: 4/3 !important;
-    max-height: 260px;
-  }
-  .hero-image img {
-    object-fit: contain !important;
-  }
-/* FULL FIX: HERO SLIDES IMAGE NOT CUT ON MOBILE */
-.hero-image {
-  width: 100%;
-  height: auto;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-}
-
-.hero-image img {
-  width: 100%;
-  height: auto;
-  object-fit: contain !important;
-  max-height: 340px;
-}
-
-
-@media(max-width:760px){
-  .hero-image {
-    padding: 10px 0;
-  }
-}
-
-}
-
 </style>
 </head>
 <body>
@@ -289,7 +374,6 @@ select,input[type="text"]{width:100%;padding:9px 10px;border-radius:8px;border:1
     </div>
   </header>
 
-
   <!-- HERO CAROUSEL -->
   <section class="hero" id="hero">
     <div class="hero-inner">
@@ -298,7 +382,7 @@ select,input[type="text"]{width:100%;padding:9px 10px;border-radius:8px;border:1
         <div class="hero-slide active" data-index="0">
           <div class="hero-main">
             <div class="hero-title">Yeezy, Jordan i hype modeli na jednom mjestu.</div>
-            <div class="hero-text">Provjereni dobavljači, reference fotke prije slanja i jednostavna narudžba preko WhatsApp-a.</div>
+            <div class="hero-text">Provjereni dobavljači, reference fotke prije slanja i jednostavna narudžba preko WhatsApp-a. CRO.KICKS — tvoja plug-in linija za tenisice.</div>
             <div class="hero-tags">
               <span class="hero-tag">🔥 Yeezy 350 Zebra</span>
               <span class="hero-tag">👟 Jordan 4 Military / Black Cat</span>
@@ -319,7 +403,7 @@ select,input[type="text"]{width:100%;padding:9px 10px;border-radius:8px;border:1
         <div class="hero-slide" data-index="1">
           <div class="hero-main">
             <div class="hero-title">Realne slike para koji ide baš tebi.</div>
-            <div class="hero-text">Za svaki par šaljemo fotke od dobavljača prije slanja + dodatne slike na zahtjev.</div>
+            <div class="hero-text">Za svaki par šaljemo fotke od dobavljača prije slanja + dodatne slike na zahtjev. Nema iznenađenja — znaš što stiže.</div>
             <div class="hero-tags">
               <span class="hero-tag">📸 Reference fotke</span>
               <span class="hero-tag">✅ Provjereni dobavljači</span>
@@ -401,6 +485,7 @@ select,input[type="text"]{width:100%;padding:9px 10px;border-radius:8px;border:1
 
   <main>
     <section class="grid" id="catalog">
+      <!-- SVE TVOJE KARTICE (ISTE KAO PRIJE) -->
       <!-- Yeezy 350 Zebra -->
       <article class="card"
         data-id="yeezy-350-zebra"
@@ -422,6 +507,7 @@ select,input[type="text"]{width:100%;padding:9px 10px;border-radius:8px;border:1
         </div>
       </article>
 
+      <!-- Ostali proizvodi – identični tvom originalu -->
       <!-- Jordan 4 Black Cat -->
       <article class="card"
         data-id="jordan4-blackcat"
@@ -1028,7 +1114,3 @@ applyFilters();
 </script>
 </body>
 </html>
-
-
-
-
