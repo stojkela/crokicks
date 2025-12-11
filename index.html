@@ -43,92 +43,89 @@ header{
 
 .header-link a{color:var(--white);opacity:.9;text-decoration:none;font-size:13px;}
 
-.hero{
-  margin-top:12px;
-  width:100%;
-  border-radius:22px;
-  overflow:hidden;
-  background:#111;
-  position:relative;
-  min-height:300px;
+/* HERO WRAPPER */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0d0d0d, #111);
+    margin-bottom: 32px;
 }
 
-  .hero::after {
-    content: "";
+/* SINGLE SLIDE */
+.hero-slide {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        90deg,
-        rgba(0,0,0,0.75) 0%,
-        rgba(0,0,0,0.55) 40%,
-        rgba(0,0,0,0.25) 70%,
-        rgba(0,0,0,0.10) 100%
-    );
-    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
 }
 
-.hero-slide{
-  position:relative;
-     z-index: 2;
-  inset:0;
-  display:flex;
-  flex-direction:column;
-  padding:18px;
-  opacity:0;
-  transition:opacity .5s ease;
-  pointer-events:none;
-
-}
-.hero-slide.active{
-  opacity:1;pointer-events:auto;
+/* ACTIVE SLIDE */
+.hero-slide.active {
+    opacity: 1;
 }
 
-.hero-title{font-size:26px;font-weight:700;max-width:500px;}
-.hero-text{font-size:14px;color:var(--muted);margin-top:6px;max-width:500px;}
-
-.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
-.hero-tag{
-  background:#1a1a1a;padding:6px 10px;border-radius:999px;
-  font-size:12px;color:var(--muted);
+/* HERO TEXT */
+.hero-text {
+    max-width: 55%;
 }
 
-.hero-cta{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;}
-.btn-hero{
-  padding:10px 16px;border-radius:30px;font-size:14px;font-weight:600;
-  cursor:pointer;border:none;transition:.2s;
+.hero-text h1 {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 12px;
 }
-.btn-hero-primary{background:var(--accent);color:#03150b;}
-.btn-hero-secondary{background:transparent;border:1px solid rgba(255,255,255,.15);color:var(--white);}
 
-.hero-img-box{
-  margin-top:16px;width:100%;border-radius:18px;overflow:hidden;
-  background:#000;display:flex;align-items:center;justify-content:center;
+.hero-text p {
+    font-size: 17px;
+    color: #aaa;
 }
-.hero-image img {
-    width: 100%;
-    height: 100%;
+
+/* HERO IMAGE */
+.hero-img {
+    width: 420px;
+    height: auto;
     object-fit: contain;
-    opacity: 0.55;            
-    filter: brightness(1.1);  
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.4));
+}
+
+/* MOBILE FIX — IMAGE FULLY VISIBLE */
+@media (max-width: 760px) {
+    .hero {
+        height: auto;
+        padding: 22px;
+    }
+
+    .hero-slide {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 26px;
+    }
+
+    .hero-img {
+        width: 85%;
+        max-width: 330px;
+        margin: 0 auto;
+    }
 }
 
 
-/* dots */
-.hero-dots{
-  position:absolute;bottom:12px;left:50%;transform:translateX(-50%);
-  display:flex;gap:8px;
-}
-.hero-dot{
-  width:9px;height:9px;border-radius:50%;
-  background:rgba(255,255,255,.25);cursor:pointer;
-}
-.hero-dot.active{background:var(--accent);}
 
-@media(min-width:780px){
-  .hero-slide{flex-direction:row;align-items:center;gap:20px;}
-  .hero-img-box{flex:0 0 340px;margin-top:0;height:260px;}
-  .hero-title{font-size:30px;}
-}
 </style>
 </head>
 
@@ -149,80 +146,40 @@ header{
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="hero">
-
-  <div class="hero-slide active" data-index="0">
-    <div>
-      <div class="hero-title">Yeezy, Jordan i hype modeli dostupni odmah.</div>
-      <div class="hero-text">Provjereni dobavljači, slike para prije slanja i brza komunikacija.</div>
-
-      <div class="hero-tags">
-        <span class="hero-tag">🔥 Yeezy Zebra</span>
-        <span class="hero-tag">🖤 Jordan 4 Black Cat</span>
-        <span class="hero-tag">🕒 Dostava ~2 tjedna</span>
-      </div>
-
-      <div class="hero-cta">
-        <button class="btn-hero btn-hero-primary" onclick="scrollToCatalog()">Pogledaj modele</button>
-        <button class="btn-hero btn-hero-secondary" onclick="openWhatsApp()">WhatsApp</button>
-      </div>
+<div class="hero">
+    
+    <!-- SLIDE 1 -->
+    <div class="hero-slide active">
+        <div class="hero-text">
+            <h1>Najtraženiji modeli — odmah dostupni.</h1>
+            <p>Provjerene kvalitete, stvarne reference i brza dostava.</p>
+        </div>
+        <img class="hero-img" src="slike/hero-af1.png" alt="Air Force 1">
     </div>
 
-    <div class="hero-img-box">
-      <img src="slike/yeezypre.jpg" alt="">
-    </div>
-  </div>
-
-  <div class="hero-slide" data-index="1">
-    <div>
-      <div class="hero-title">Slike para koji ide baš tebi.</div>
-      <div class="hero-text">Reference fotke od dobavljača prije slanja — nema iznenađenja.</div>
-
-      <div class="hero-tags">
-        <span class="hero-tag">📸 Reference fotke</span>
-        <span class="hero-tag">💬 Podrška 0-24</span>
-      </div>
-
-      <div class="hero-cta">
-        <button class="btn-hero btn-hero-primary" onclick="openWhatsApp()">Traži slike</button>
-        <button class="btn-hero btn-hero-secondary" onclick="scrollToCatalog()">Katalog</button>
-      </div>
+    <!-- SLIDE 2 -->
+    <div class="hero-slide">
+        <div class="hero-text">
+            <h1>Jordan 4 Black Cat — bezvremenska klasika.</h1>
+            <p>Premium materijali, top seller među mušterijama.</p>
+        </div>
+        <img class="hero-img" src="slike/hero-blackcat.png" alt="Jordan 4 Black Cat">
     </div>
 
-    <div class="hero-img-box">
-      <img src="slike/blackcat.jpg" alt="">
-    </div>
-  </div>
-
-  <div class="hero-slide" data-index="2">
-    <div>
-      <div class="hero-title">Pickup Zagreb ili dostava na adresu.</div>
-      <div class="hero-text">Odaberi model, javi veličinu i šaljemo isti dan.</div>
-
-      <div class="hero-tags">
-        <span class="hero-tag">🚚 Dostava HR</span>
-        <span class="hero-tag">📍 Osobno preuzimanje</span>
-      </div>
-
-      <div class="hero-cta">
-        <button class="btn-hero btn-hero-primary" onclick="scrollToCatalog()">Pogledaj modele</button>
-        <button class="btn-hero btn-hero-secondary" onclick="openWhatsApp()">Kontakt</button>
-      </div>
+    <!-- SLIDE 3 -->
+    <div class="hero-slide">
+        <div class="hero-text">
+            <h1>Yeezy modeli svih veličina.</h1>
+            <p>Najudobnije tenisice na tržištu, dostupne odmah.</p>
+        </div>
+        <img class="hero-img" src="slike/hero-yeezy.png" alt="Yeezy">
     </div>
 
-    <div class="hero-img-box">
-      <img src="slike/preview.png" alt="">
-    </div>
-  </div>
+</div>
 
-  <div class="hero-dots">
-    <div class="hero-dot active" data-index="0"></div>
-    <div class="hero-dot" data-index="1"></div>
-    <div class="hero-dot" data-index="2"></div>
-  </div>
 
-</section>
+
+
 
   <!-- EXTRA STYLES + LAYOUT -->
 <style>
@@ -892,4 +849,3 @@ function orderFromDetail(){
 </div><!-- /.wrap -->
 </body>
 </html>
-
