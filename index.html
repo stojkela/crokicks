@@ -53,8 +53,23 @@ header{
   min-height:300px;
 }
 
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.75) 0%,
+        rgba(0,0,0,0.55) 40%,
+        rgba(0,0,0,0.25) 70%,
+        rgba(0,0,0,0.10) 100%
+    );
+    z-index: 1;
+}
+
 .hero-slide{
-  position:absolute;
+  position:relative;
+     z-index: 2;
   inset:0;
   display:flex;
   flex-direction:column;
@@ -62,6 +77,7 @@ header{
   opacity:0;
   transition:opacity .5s ease;
   pointer-events:none;
+
 }
 .hero-slide.active{
   opacity:1;pointer-events:auto;
@@ -88,9 +104,14 @@ header{
   margin-top:16px;width:100%;border-radius:18px;overflow:hidden;
   background:#000;display:flex;align-items:center;justify-content:center;
 }
-.hero-img-box img{
-  width:100%;height:100%;object-fit:cover;
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.55;            
+    filter: brightness(1.1);  
 }
+
 
 /* dots */
 .hero-dots{
@@ -871,3 +892,4 @@ function orderFromDetail(){
 </div><!-- /.wrap -->
 </body>
 </html>
+
