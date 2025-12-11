@@ -1,374 +1,384 @@
 <!doctype html>
 <html lang="hr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>CRO.KICKS — Katalog</title>
-<meta name="description" content="CRO.KICKS — katalog tenisica. Dostava ~2 tjedna. Naruči preko WhatsApp/IG." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<style>
-:root{
-  --bg:#0b0b0b;
-  --card:#141416;
-  --muted:#9aa0a6;
-  --accent:#23b26b;
-  --white:#fff;
-  --shadow: rgba(0,0,0,0.5);
-}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{
-  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-  background:var(--bg);
-  color:var(--white);
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{
-  max-width:1100px;
-  margin:0 auto;
-  padding:12px 16px 64px;
-}
+  <title>CRO.KICKS — Premium footwear</title>
+  <meta name="description" content="CRO.KICKS — provjereni hype modeli, Yeezy, Jordan, Nike, Adidas. Dostava ~2 tjedna. Reference slike prije slanja. Narudžbe preko WhatsApp-a.">
 
-/* HEADER */
-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:16px;
-  padding:8px 0 10px;
-}
-.logo-wrap{display:flex;align-items:center;gap:12px;}
-.logo{
-  width:56px;height:56px;border-radius:12px;background:#111;
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 4px 8px var(--shadow);
-}
-.logo img{width:100%;height:100%;object-fit:cover;border-radius:10px;}
-.brand{font-weight:700;font-size:24px;letter-spacing:.03em;}
-p.lead{color:var(--muted);margin-top:2px;font-size:13px;}
-.header-link{
-  font-size:13px;
-  color:var(--muted);
-}
-.header-link a{color:var(--white);text-decoration:none;font-weight:500;}
-.header-link a:hover{text-decoration:underline;}
+  <!-- SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CRO.KICKS">
+  <meta name="keywords" content="yeezy, jordan, jordanke, nike, air force, dunk, adidas, tenisice, hype sneakers, crokicks, cro kicks">
 
-@media(max-width:640px){
-  header{flex-direction:column;align-items:flex-start;gap:6px;}
-}
+  <!-- OG / Social preview -->
+  <meta property="og:title" content="CRO.KICKS — Premium Footwear">
+  <meta property="og:description" content="Yeezy, Jordan, Nike, Adidas — reference slike prije slanja, dostava ~2 tjedna, narudžba preko WhatsApp-a.">
+  <meta property="og:image" content="slike/preview.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://stojkela.github.io">
 
-/* HERO CAROUSEL */
-.hero{
-  position:relative;
-  border-radius:20px;
-  overflow:hidden;
-  margin-top:10px;
-  margin-bottom:18px;
-  background:#050505;
-  box-shadow:0 8px 26px var(--shadow);
-}
-.hero-inner{position:relative;width:100%;height:100%;}
-.hero-slides{position:relative;width:100%;height:100%;min-height:260px;}
-.hero-slide{
-  position:absolute;inset:0;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-  padding:16px 16px 18px;
-  opacity:0;
-  pointer-events:none;
-  transition:opacity .6s ease;
-}
-.hero-slide.active{opacity:1;pointer-events:auto;}
+  <!-- Twitter preview -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CRO.KICKS — Premium Footwear">
+  <meta name="twitter:description" content="Hype modeli, reference slike prije slanja i brza komunikacija.">
+  <meta name="twitter:image" content="slike/preview.jpg">
 
-.hero-main{display:flex;flex-direction:column;gap:10px;z-index:2;position:relative;}
-.hero-title{
-  font-size:24px;
-  font-weight:800;
-  letter-spacing:.01em;
-}
-.hero-text{
-  color:var(--muted);
-  font-size:13px;
-  max-width:520px;
-}
-.hero-tags{
-  display:flex;flex-wrap:wrap;gap:6px;
-  font-size:11px;margin-top:4px;
-}
-.hero-tag{
-  background:#111;border-radius:999px;
-  padding:4px 9px;color:var(--muted);
-}
-.hero-cta{
-  margin-top:8px;
-  display:flex;gap:8px;flex-wrap:wrap;
-}
-.btn-hero{
-  padding:9px 14px;border-radius:999px;
-  border:none;font-weight:600;cursor:pointer;
-  font-size:13px;transition:.18s;
-}
-.btn-hero-primary{background:var(--accent);color:#06110a;}
-.btn-hero-primary:hover{opacity:.9;}
-.btn-hero-secondary{
-  background:transparent;
-  border:1px solid rgba(255,255,255,.18);
-  color:var(--white);
-}
-.btn-hero-secondary:hover{background:rgba(255,255,255,.06);}
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="slike/logo.png">
+  <link rel="apple-touch-icon" href="slike/logo.png">
+  <meta name="theme-color" content="#0b0b0b">
 
-/* HERO IMAGE */
-.hero-image-wrap{margin-top:8px;}
-.hero-image{
-  width:100%;
-  border-radius:18px;
-  background:radial-gradient(circle at top,#1b1b1b 0,#050505 65%);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:6px;
-}
-.hero-image img{
-  width:100%;
-  height:auto;
-  max-height:320px;
-  object-fit:contain;
-  border-radius:16px;
-}
+  <style>
+    :root{
+      --bg:#050505;
+      --card:#141416;
+      --muted:#9aa0a6;
+      --accent:#23b26b;
+      --white:#ffffff;
+      --shadow:rgba(0,0,0,0.5);
+    }
 
-/* DOTS */
-.hero-dots{
-  position:absolute;
-  bottom:8px;
-  left:50%;
-  transform:translateX(-50%);
-  display:flex;
-  gap:6px;
-}
-.hero-dot{
-  width:7px;height:7px;border-radius:999px;
-  background:rgba(255,255,255,.24);
-  cursor:pointer;transition:.2s;
-}
-.hero-dot.active{background:var(--accent);width:16px;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{
+      font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      background:radial-gradient(circle at top,#13171b 0,#050505 55%);
+      color:var(--white);
+      -webkit-font-smoothing:antialiased;
+      min-height:100vh;
+      animation:fade-body .4s ease-out;
+    }
+    @keyframes fade-body{
+      from{opacity:0;transform:translateY(6px);}
+      to{opacity:1;transform:translateY(0);}
+    }
 
-@media(min-width:780px){
-  .hero-slide{
-    flex-direction:row;
-    align-items:center;
-    justify-content:space-between;
-    padding:18px 22px;
-  }
-  .hero-main{flex:1.1;}
-  .hero-image-wrap{flex:0 0 280px;margin-top:0;}
-  .hero-title{font-size:28px;}
-  .hero-text{font-size:14px;}
-  .hero-image img{max-height:360px;}
-}
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:16px 16px 64px;
+    }
 
-/* TOOLBAR */
-.toolbar{
-  display:flex;flex-wrap:wrap;gap:8px;
-  margin-bottom:14px;align-items:center;
-}
-.toolbar-group{flex:1 1 100%;}
-.toolbar-group.half{flex:1 1 calc(50% - 4px);}
-.toolbar input[type="search"], .toolbar select{
-  width:100%;padding:10px 13px;border-radius:999px;
-  border:1px solid rgba(255,255,255,.12);
-  background:#101010;color:var(--white);font-size:13px;
-}
-.toolbar input::placeholder{color:#6f7378;}
-@media(min-width:720px){
-  .toolbar-group.search{flex:2;}
-  .toolbar-group.half{flex:1;}
-}
+    /* HEADER */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:10px 0 14px;
+    }
+    .logo-wrap{display:flex;align-items:center;gap:12px;}
+    .logo{
+      width:56px;height:56px;border-radius:14px;
+      background:#050505;
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.75);
+      overflow:hidden;
+    }
+    .logo img{width:100%;height:100%;object-fit:cover;border-radius:12px;}
+    .brand{font-weight:800;font-size:22px;letter-spacing:.04em;}
+    p.lead{color:var(--muted);margin-top:2px;font-size:13px;}
+    .header-link a{color:var(--white);text-decoration:none;font-size:13px;opacity:.85;}
+    .header-link a:hover{text-decoration:underline;}
 
-/* GRID / CARDS */
-.grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:18px;
-}
-@media(min-width:650px){.grid{grid-template-columns:repeat(2,1fr);}}
-@media(min-width:980px){.grid{grid-template-columns:repeat(3,1fr);}}
+    /* HERO */
+    .hero{
+      position:relative;
+      border-radius:20px;
+      overflow:hidden;
+      margin-bottom:20px;
+      background:radial-gradient(circle at top,#1f2933 0,#090d10 55%);
+      min-height:340px;
+      box-shadow:0 16px 40px rgba(0,0,0,0.9);
+    }
+    .hero-inner{position:relative;width:100%;height:100%;}
+    .hero-slides{position:relative;width:100%;height:100%;}
+    .hero-slide{
+      position:absolute;inset:0;
+      display:flex;flex-direction:column;
+      gap:16px;
+      padding:18px;
+      opacity:0;
+      pointer-events:none;
+      transition:opacity .6s ease;
+    }
+    .hero-slide.active{opacity:1;pointer-events:auto;}
 
-/* PRODUCT CARD */
-.card{
-  background:var(--card);
-  padding:14px;
-  border-radius:18px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  transition:transform 0.18s,box-shadow 0.18s;
-  box-shadow:0 4px 14px var(--shadow);
-}
-.card:hover{transform:translateY(-3px);box-shadow:0 8px 20px var(--shadow);}
-.img{
-  width:100%;
-  border-radius:14px;
-  overflow:hidden;
-  display:flex;align-items:center;justify-content:center;
-  background:#202020;
-}
-.img img{
-  width:100%;height:100%;
-  object-fit:cover;
-  border-radius:12px;
-  transition:transform 0.28s;
-}
-.img img:hover{transform:scale(1.03);}
-h3{font-size:18px;font-weight:600;margin-top:4px;}
-.meta{
-  display:flex;justify-content:space-between;align-items:center;
-  color:var(--muted);font-size:13px;
-}
-.price{font-weight:700;color:var(--white);font-size:16px;}
-.badges{display:flex;gap:6px;flex-wrap:wrap;font-size:11px;}
-.badge{background:#111;padding:3px 8px;border-radius:999px;color:var(--muted);}
-.badge-hot{background:#2c1818;color:#ffb3b3;}
-.badge-new{background:#182627;color:#7ce0c7;}
-.actions{display:flex;gap:8px;margin-top:auto;}
-.btn{
-  flex:1;padding:10px 0;border-radius:12px;border:none;
-  font-weight:600;cursor:pointer;transition:all 0.18s;font-size:14px;
-}
-.btn-order{background:var(--accent);color:#06110a;}
-.btn-order:hover{opacity:0.9;}
-.btn-info{
-  background:transparent;
-  border:1px solid rgba(255,255,255,0.15);
-  color:var(--white);
-}
-.btn-info:hover{background:rgba(255,255,255,0.05);}
+    .hero-main{z-index:2;position:relative;}
+    .hero-title{font-size:24px;font-weight:800;line-height:1.2;}
+    .hero-text{color:var(--muted);font-size:14px;max-width:480px;margin-top:4px;}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:6px;font-size:11px;margin-top:8px;}
+    .hero-tag{
+      background:rgba(7,12,10,0.85);
+      border-radius:999px;
+      padding:4px 9px;
+      color:#b0f2cf;
+      border:1px solid rgba(35,178,107,0.5);
+    }
 
-/* WHY SECTION */
-.why{margin-top:24px;margin-bottom:8px;display:grid;gap:12px;}
-@media(min-width:800px){.why{grid-template-columns:repeat(3,1fr);}}
-.why-card{background:#111212;border-radius:14px;padding:12px 13px;}
-.why-title{font-size:14px;font-weight:600;margin-bottom:3px;}
-.why-text{font-size:13px;color:var(--muted);}
+    .hero-cta{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;}
+    .btn-hero{
+      padding:9px 16px;border-radius:999px;
+      border:none;font-weight:600;cursor:pointer;
+      font-size:13px;transition:.16s;
+      display:inline-flex;align-items:center;gap:6px;
+    }
+    .btn-hero-primary{
+      background:linear-gradient(135deg,#23b26b,#43e08c);
+      color:#041108;
+      box-shadow:0 10px 30px rgba(35,178,107,0.4);
+    }
+    .btn-hero-primary:hover{transform:translateY(-1px);box-shadow:0 16px 40px rgba(35,178,107,0.5);}
+    .btn-hero-secondary{
+      background:rgba(0,0,0,0.4);
+      border:1px solid rgba(255,255,255,0.18);
+      color:var(--white);
+    }
+    .btn-hero-secondary:hover{background:rgba(255,255,255,0.05);}
 
-/* FOOTER */
-footer{margin-top:26px;text-align:center;font-size:13px;color:var(--muted);}
-.link{color:var(--accent);text-decoration:none;}
-.link:hover{text-decoration:underline;}
+    .hero-image-wrap{margin-top:10px;width:100%;}
+    .hero-image{
+      border-radius:16px;
+      overflow:hidden;
+      background:radial-gradient(circle at top,#262f38 0,#111418 55%);
+      width:100%;
+      max-height:260px;
+      display:flex;align-items:center;justify-content:center;
+    }
+    .hero-image img{
+      width:100%;height:100%;
+      object-fit:contain;object-position:center;
+      padding:10px;
+      filter:drop-shadow(0 16px 35px rgba(0,0,0,.8));
+    }
 
-/* MODAL NARUDŽBA */
-.modal{
-  position:fixed;inset:0;display:none;
-  align-items:center;justify-content:center;
-  background:rgba(0,0,0,0.7);
-  z-index:200;padding:20px;overflow:auto;
-}
-.modal .box{
-  width:100%;max-width:480px;
-  background:var(--card);
-  padding:20px;border-radius:16px;
-  box-shadow:0 8px 24px var(--shadow);
-}
-label{font-size:13px;color:var(--muted);margin-bottom:6px;display:block;}
-select,input[type="text"]{
-  width:100%;padding:9px 10px;border-radius:8px;
-  border:1px solid rgba(255,255,255,0.1);
-  background:#0b0b0b;color:var(--white);
-  margin-bottom:10px;font-size:14px;
-}
-.small{font-size:13px;color:var(--muted);margin-top:4px;}
+    .hero-dots{
+      position:absolute;bottom:10px;left:50%;transform:translateX(-50%);
+      display:flex;gap:6px;
+    }
+    .hero-dot{
+      width:8px;height:8px;border-radius:999px;
+      background:rgba(255,255,255,0.25);
+      cursor:pointer;transition:.2s;
+    }
+    .hero-dot.active{background:var(--accent);width:16px;}
 
-/* PRODUCT DETAIL OVERLAY */
-.detail-overlay{
-  position:fixed;inset:0;background:rgba(0,0,0,0.9);
-  display:none;z-index:110;padding:20px;overflow:auto;
-}
-.detail-inner{
-  max-width:1100px;margin:0 auto;
-  background:#111214;border-radius:18px;
-  padding:16px 16px 70px;position:relative;
-}
-.detail-header{
-  display:flex;justify-content:space-between;align-items:center;
-  margin-bottom:10px;
-}
-.detail-layout{display:flex;flex-direction:column;gap:16px;}
-@media(min-width:900px){
-  .detail-layout{flex-direction:row;align-items:flex-start;}
-  .detail-left{flex:1.1;}
-  .detail-right{flex:1;max-width:420px;}
-}
-#mainImage{border-radius:14px;overflow:hidden;background:#202020;}
-#mainImage img{
-  width:100%;border-radius:14px;
-  max-height:460px;object-fit:cover;
-}
-.gallery{
-  display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;
-}
-.gallery img{
-  width:calc(25% - 6px);
-  border-radius:8px;object-fit:cover;
-  cursor:pointer;opacity:.9;
-  transition:transform .2s,opacity .2s;
-}
-.gallery img:hover{transform:scale(1.04);opacity:1;}
-.sizes{
-  display:flex;gap:8px;flex-wrap:wrap;margin:8px 0;
-}
-.sizes span{
-  background:#1b1b1b;padding:6px 10px;border-radius:8px;
-  font-size:13px;cursor:pointer;border:1px solid transparent;
-}
-.sizes span.selected{border-color:var(--accent);background:#122017;}
-.detail-price{font-size:22px;font-weight:700;margin:2px 0;}
-.detail-meta{font-size:13px;color:var(--muted);}
-.detail-section-title{font-size:14px;font-weight:600;margin-top:12px;margin-bottom:4px;}
-.detail-recs{display:flex;flex-wrap:wrap;gap:8px;font-size:13px;}
-.detail-rec-item{background:#181818;padding:7px 9px;border-radius:8px;cursor:pointer;}
-.detail-rec-item:hover{background:#1f1f1f;}
-.detail-reviews{font-size:13px;color:var(--muted);}
-.detail-reviews p{margin-bottom:4px;}
+    @media(min-width:780px){
+      .hero-slide{flex-direction:row;align-items:center;justify-content:space-between;padding:20px 22px;}
+      .hero-image-wrap{flex:0 0 260px;margin-top:0;}
+      .hero-title{font-size:26px;}
+    }
+    @media(max-width:600px){
+      .hero{min-height:380px;padding-bottom:30px;}
+      .hero-title{font-size:21px;}
+      .hero-image{max-height:220px;}
+    }
 
-/* STICKY BAR ZA DETALJE */
-.detail-sticky{
-  position:fixed;left:0;right:0;bottom:0;
-  background:rgba(5,5,5,0.95);
-  border-top:1px solid rgba(255,255,255,0.08);
-  padding:8px 16px;display:none;z-index:120;
-}
-.detail-sticky-inner{
-  max-width:1100px;margin:0 auto;
-  display:flex;justify-content:space-between;
-  align-items:center;gap:10px;
-}
-.detail-sticky-price{font-weight:600;}
-.detail-sticky button{
-  padding:8px 16px;border-radius:999px;border:none;
-  background:var(--accent);color:#06110a;
-  font-weight:600;cursor:pointer;font-size:14px;
-}
+    /* TOOLBAR */
+    .toolbar{
+      display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;align-items:center;
+      animation:fade-up .5s ease-out;
+    }
+    .toolbar-group{flex:1 1 100%;}
+    .toolbar-group.half{flex:1 1 calc(50% - 4px);}
+    .toolbar input[type="search"], .toolbar select{
+      width:100%;padding:9px 12px;border-radius:999px;
+      border:1px solid rgba(255,255,255,0.12);
+      background:#0b0b0b;color:var(--white);font-size:13px;
+    }
+    @media(min-width:720px){
+      .toolbar-group.search{flex:2;}
+      .toolbar-group.half{flex:1;}
+    }
 
-/* MOBILE TWEAKS */
-@media(max-width:760px){
-  .hero-slide{padding:14px 14px 20px;gap:12px;}
-  .hero-title{font-size:22px;}
-  .hero-text{font-size:13px;}
-  .hero-image img{max-height:260px;}
-  .grid{gap:16px;}
-  .card{padding:13px;}
-}
-</style>
+    /* GRID / CARDS */
+    .grid{display:grid;grid-template-columns:1fr;gap:18px;}
+    @media(min-width:650px){.grid{grid-template-columns:repeat(2,1fr);}}
+    @media(min-width:980px){.grid{grid-template-columns:repeat(3,1fr);}}
+
+    .card{
+      background:radial-gradient(circle at top,#191b1f 0,#111214 60%);
+      padding:14px;
+      border-radius:18px;
+      display:flex;flex-direction:column;gap:10px;
+      box-shadow:0 10px 28px rgba(0,0,0,0.9);
+      transform:translateY(0);
+      opacity:0;
+      animation:fade-up .55s ease-out forwards;
+    }
+    .card:nth-child(2){animation-delay:.05s;}
+    .card:nth-child(3){animation-delay:.1s;}
+    .card:nth-child(4){animation-delay:.15s;}
+    .card:nth-child(5){animation-delay:.2s;}
+    .card:nth-child(6){animation-delay:.25s;}
+    .card:nth-child(7){animation-delay:.3s;}
+    .card:nth-child(8){animation-delay:.35s;}
+    .card:nth-child(9){animation-delay:.4s;}
+    .card:nth-child(10){animation-delay:.45s;}
+
+    @keyframes fade-up{
+      from{opacity:0;transform:translateY(10px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+
+    .card:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(0,0,0,0.9);}
+    .img{
+      width:100%;border-radius:14px;overflow:hidden;
+      display:flex;align-items:center;justify-content:center;
+      background:#202020;
+    }
+    .img img{
+      width:100%;height:100%;
+      object-fit:cover;
+      border-radius:12px;
+      transition:transform .25s;
+    }
+    .card:hover .img img{transform:scale(1.03);}
+    h3{font-size:17px;font-weight:600;margin-top:4px;}
+    .meta{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px;}
+    .price{font-weight:700;color:var(--white);font-size:16px;}
+
+    .badges{display:flex;gap:6px;flex-wrap:wrap;font-size:11px;}
+    .badge{background:#111;padding:3px 8px;border-radius:999px;color:var(--muted);}
+    .badge-hot{background:#2c1818;color:#ffb3b3;}
+    .badge-new{background:#182627;color:#7ce0c7;}
+
+    .actions{display:flex;gap:8px;margin-top:auto;}
+    .btn{
+      flex:1;padding:9px 0;border-radius:12px;border:none;
+      font-weight:600;cursor:pointer;transition:all .18s;font-size:14px;
+    }
+    .btn-order{background:var(--accent);color:#06110a;}
+    .btn-order:hover{opacity:.95;transform:translateY(-1px);}
+    .btn-info{
+      background:transparent;border:1px solid rgba(255,255,255,0.18);color:var(--white);
+    }
+    .btn-info:hover{background:rgba(255,255,255,0.04);}
+
+    /* WHY SECTION */
+    .why{margin-top:26px;margin-bottom:10px;display:grid;gap:12px;animation:fade-up .6s ease-out;}
+    @media(min-width:800px){.why{grid-template-columns:repeat(3,1fr);}}
+    .why-card{
+      background:linear-gradient(145deg,#101113,#15181b);
+      border-radius:14px;padding:12px 13px;
+      border:1px solid rgba(255,255,255,0.04);
+    }
+    .why-title{font-size:14px;font-weight:600;margin-bottom:3px;}
+    .why-text{font-size:13px;color:var(--muted);}
+
+    /* FOOTER */
+    footer{margin-top:26px;text-align:center;font-size:13px;color:var(--muted);}
+    .link{color:var(--accent);text-decoration:none;}
+    .link:hover{text-decoration:underline;}
+
+    /* MODAL ORDER */
+    .modal{
+      position:fixed;inset:0;
+      display:none;
+      align-items:center;justify-content:center;
+      background:rgba(0,0,0,0.75);
+      z-index:200;padding:20px;overflow:auto;
+    }
+    .modal .box{
+      width:100%;max-width:460px;
+      background:#111214;border-radius:16px;
+      padding:20px;
+      box-shadow:0 18px 40px rgba(0,0,0,.95);
+      animation:fade-up .35s ease-out;
+    }
+    label{font-size:13px;color:var(--muted);margin-bottom:4px;display:block;margin-top:4px;}
+    select,input[type="text"]{
+      width:100%;padding:9px 10px;border-radius:8px;
+      border:1px solid rgba(255,255,255,0.12);
+      background:#050607;color:var(--white);margin-bottom:6px;font-size:14px;
+    }
+    .small{font-size:12px;color:var(--muted);margin-top:4px;}
+
+    /* DETAIL OVERLAY */
+    .detail-overlay{
+      position:fixed;inset:0;background:rgba(0,0,0,0.9);
+      display:none;z-index:190;padding:20px;overflow:auto;
+    }
+    .detail-inner{
+      max-width:1100px;margin:0 auto;background:#111214;
+      border-radius:20px;padding:16px 16px 70px;position:relative;
+      box-shadow:0 18px 40px rgba(0,0,0,0.95);
+      animation:fade-up .35s ease-out;
+    }
+    .detail-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+    .detail-layout{display:flex;flex-direction:column;gap:16px;}
+    @media(min-width:900px){
+      .detail-layout{flex-direction:row;align-items:flex-start;}
+      .detail-left{flex:1.1;}
+      .detail-right{flex:1;max-width:420px;}
+    }
+    #mainImage{border-radius:14px;overflow:hidden;background:#202020;}
+    #mainImage img{width:100%;border-radius:14px;max-height:460px;object-fit:cover;}
+    .gallery{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;}
+    .gallery img{
+      width:calc(25% - 6px);border-radius:8px;object-fit:cover;
+      cursor:pointer;opacity:.88;transition:transform .2s,opacity .2s;
+    }
+    .gallery img:hover{transform:scale(1.04);opacity:1;}
+
+    .sizes{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0;}
+    .sizes span{
+      background:#1b1b1b;padding:6px 10px;border-radius:8px;font-size:13px;
+      cursor:pointer;border:1px solid transparent;
+    }
+    .sizes span.selected{border-color:var(--accent);background:#122017;}
+
+    .detail-price{font-size:22px;font-weight:700;margin:2px 0;}
+    .detail-meta{font-size:13px;color:var(--muted);}
+    .detail-section-title{font-size:14px;font-weight:600;margin-top:12px;margin-bottom:4px;}
+    .detail-recs{display:flex;flex-wrap:wrap;gap:8px;font-size:13px;}
+    .detail-rec-item{
+      background:#181818;padding:7px 9px;border-radius:8px;cursor:pointer;
+    }
+    .detail-rec-item:hover{background:#222222;}
+    .detail-reviews{font-size:13px;color:var(--muted);}
+    .detail-reviews p{margin-bottom:4px;}
+
+    /* STICKY BAR */
+    .detail-sticky{
+      position:fixed;left:0;right:0;bottom:0;
+      background:rgba(5,5,5,0.97);
+      border-top:1px solid rgba(255,255,255,0.08);
+      padding:8px 16px;
+      display:none;z-index:195;
+    }
+    .detail-sticky-inner{
+      max-width:1100px;margin:0 auto;
+      display:flex;justify-content:space-between;align-items:center;gap:10px;
+    }
+    .detail-sticky-price{font-weight:700;}
+    .detail-sticky button{
+      padding:8px 16px;border-radius:999px;border:none;
+      background:var(--accent);color:#06110a;font-weight:600;cursor:pointer;font-size:14px;
+    }
+
+    @media(max-width:760px){
+      header{flex-direction:column;align-items:flex-start;}
+      .modal .box{width:96%;}
+    }
+  </style>
 </head>
 <body>
 <div class="wrap">
+
+  <!-- HEADER -->
   <header>
     <div class="logo-wrap">
-      <div class="logo"><img src="slike/logo.png" alt="CRO.KICKS"></div>
+      <div class="logo">
+        <img src="slike/logo.png" alt="CRO.KICKS">
+      </div>
       <div>
         <div class="brand">CRO.KICKS</div>
         <p class="lead">Premium footwear — Dostava oko 2 tjedna • Osobno preuzimanje Zagreb</p>
       </div>
     </div>
+
     <div class="header-link">
       <a href="https://instagram.com/cro.kicks_" target="_blank">@cro.kicks_</a>
     </div>
@@ -378,93 +388,85 @@ select,input[type="text"]{
   <section class="hero" id="hero">
     <div class="hero-inner">
       <div class="hero-slides">
+
         <!-- SLIDE 1 -->
         <div class="hero-slide active" data-index="0">
           <div class="hero-main">
-            <div class="hero-title">Yeezy, Jordan i hype modeli na jednom mjestu.</div>
-            <div class="hero-text">Provjereni dobavljači, reference fotke prije slanja i jednostavna narudžba preko WhatsApp-a. CRO.KICKS — tvoja plug-in linija za tenisice.</div>
+            <div class="hero-title">Yeezy i Jordan hype modeli na jednom mjestu.</div>
+            <div class="hero-text">Reference fotke prije slanja, provjereni dobavljači i brza komunikacija preko WhatsApp-a.</div>
+
             <div class="hero-tags">
               <span class="hero-tag">🔥 Yeezy 350 Zebra</span>
-              <span class="hero-tag">👟 Jordan 4 Military / Black Cat</span>
-              <span class="hero-tag">🕒 Dostava ~2 tjedna</span>
+              <span class="hero-tag">🖤 Jordan 4 Black Cat</span>
+              <span class="hero-tag">🚚 Dostava ~2 tjedna</span>
             </div>
+
             <div class="hero-cta">
               <button class="btn-hero btn-hero-primary" onclick="scrollToCatalog()">Pogledaj modele</button>
               <button class="btn-hero btn-hero-secondary" onclick="openWhatsAppGeneral()">Javi se na WhatsApp</button>
             </div>
           </div>
+
           <div class="hero-image-wrap">
             <div class="hero-image">
-              <img src="slike/yeezy.jpg" alt="Yeezy hero">
+              <img src="slike/yeezypre.jpg" alt="Yeezy 350 Zebra">
             </div>
           </div>
         </div>
+
         <!-- SLIDE 2 -->
         <div class="hero-slide" data-index="1">
           <div class="hero-main">
-            <div class="hero-title">Realne slike para koji ide baš tebi.</div>
-            <div class="hero-text">Za svaki par šaljemo fotke od dobavljača prije slanja + dodatne slike na zahtjev. Nema iznenađenja — znaš što stiže.</div>
+            <div class="hero-title">Jordan 4 Black Cat — uvijek tražen model.</div>
+            <div class="hero-text">Dobiješ realne slike para koji ide baš tebi prije nego što šaljemo.</div>
+
             <div class="hero-tags">
               <span class="hero-tag">📸 Reference fotke</span>
-              <span class="hero-tag">✅ Provjereni dobavljači</span>
-              <span class="hero-tag">💬 WhatsApp support</span>
+              <span class="hero-tag">⭐ Hype model</span>
+              <span class="hero-tag">💬 Support preko WhatsApp-a</span>
             </div>
+
             <div class="hero-cta">
-              <button class="btn-hero btn-hero-primary" onclick="openWhatsAppGeneral()">Traži reference za model</button>
-              <button class="btn-hero btn-hero-secondary" onclick="scrollToCatalog()">Pogledaj katalog</button>
+              <button class="btn-hero btn-hero-primary" onclick="openWhatsAppGeneral()">Pitaj za dostupne brojeve</button>
+              <button class="btn-hero btn-hero-secondary" onclick="scrollToCatalog()">Pogledaj ponudu</button>
             </div>
           </div>
+
           <div class="hero-image-wrap">
             <div class="hero-image">
-              <img src="slike/dunk_panda1.jpg" alt="Reference hero">
+              <img src="slike/blackcat.jpg" alt="Jordan 4 Black Cat">
             </div>
           </div>
         </div>
-        <!-- SLIDE 3 -->
-        <div class="hero-slide" data-index="2">
-          <div class="hero-main">
-            <div class="hero-title">Osobno preuzimanje u Zagrebu ili dostava na adresu.</div>
-            <div class="hero-text">Ako si iz Zagreba, možemo se dogovoriti za osobno preuzimanje. Inače šaljemo dostavom diljem Hrvatske.</div>
-            <div class="hero-tags">
-              <span class="hero-tag">📍 Zagreb pickup</span>
-              <span class="hero-tag">🚚 Dostava Hrvatska</span>
-              <span class="hero-tag">💶 Plaćanje po dogovoru</span>
-            </div>
-            <div class="hero-cta">
-              <button class="btn-hero btn-hero-primary" onclick="scrollToCatalog()">Pogledaj ponudu</button>
-              <button class="btn-hero btn-hero-secondary" onclick="openWhatsAppGeneral()">Dogovori preuzimanje</button>
-            </div>
-          </div>
-          <div class="hero-image-wrap">
-            <div class="hero-image">
-              <img src="slike/af1_white1.jpg" alt="City hero">
-            </div>
-          </div>
-        </div>
+
       </div>
+
+      <!-- DOTS -->
       <div class="hero-dots" id="heroDots">
         <div class="hero-dot active" data-index="0"></div>
         <div class="hero-dot" data-index="1"></div>
-        <div class="hero-dot" data-index="2"></div>
       </div>
+
     </div>
   </section>
 
-  <!-- Toolbar -->
+  <!-- TOOLBAR -->
   <section class="toolbar">
     <div class="toolbar-group search">
       <input type="search" id="searchInput" placeholder="Pretraži modele (npr. Yeezy, Jordan, Dunk...)" oninput="applyFilters()" />
     </div>
+
     <div class="toolbar-group half">
       <select id="brandFilter" onchange="applyFilters()">
         <option value="">Brand (sve)</option>
         <option value="yeezy">Yeezy</option>
         <option value="jordan">Jordan</option>
-        <option value="ugg">UGG</option>
         <option value="nike">Nike</option>
         <option value="adidas">Adidas</option>
+        <option value="ugg">UGG</option>
       </select>
     </div>
+
     <div class="toolbar-group half">
       <select id="sizeFilter" onchange="applyFilters()">
         <option value="">Veličina (sve)</option>
@@ -473,6 +475,7 @@ select,input[type="text"]{
         <option>44</option><option>45</option><option>46</option><option>47</option>
       </select>
     </div>
+
     <div class="toolbar-group">
       <select id="sortSelect" onchange="applyFilters()">
         <option value="">Sortiranje</option>
@@ -483,316 +486,303 @@ select,input[type="text"]{
     </div>
   </section>
 
-  <main>
-    <section class="grid" id="catalog">
-      <!-- SVE TVOJE KARTICE (ISTE KAO PRIJE) -->
-      <!-- Yeezy 350 Zebra -->
-      <article class="card"
-        data-id="yeezy-350-zebra"
-        data-name="Yeezy 350 Zebra"
-        data-price="120"
-        data-brand="yeezy"
-        data-sizes="37,38,39,40,41,42,43,44,45,46,47"
-        data-images='["slike/yeezy.jpg","slike/yeezy1.jpg","slike/yeezy2.jpg"]'>
-        <div class="img"><img src="slike/yeezy.jpg" alt="Yeezy 350 Zebra"></div>
-        <div class="badges">
-          <span class="badge badge-hot">TOP SELLER</span>
-          <span class="badge">Unisex</span>
-        </div>
-        <h3>Yeezy 350 Zebra</h3>
-        <div class="meta"><div class="price">120€</div><div class="muted">Dostava ~2 tj.</div></div>
-        <div class="actions">
-          <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
-          <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
-        </div>
-      </article>
+  <!-- KATALOG -->
+  <section class="grid" id="catalog">
 
-      <!-- Ostali proizvodi – identični tvom originalu -->
-      <!-- Jordan 4 Black Cat -->
-      <article class="card"
-        data-id="jordan4-blackcat"
-        data-name="Jordan 4 Black Cat"
-        data-price="110"
-        data-brand="jordan"
-        data-sizes="40,41,42,43,44"
-        data-images='["slike/jordan4_blackcat1.jpg","slike/jordan4_blackcat2.jpg"]'>
-        <div class="img"><img src="slike/jordan4_blackcat1.jpg" alt="Jordan 4 Black Cat"></div>
-        <div class="badges">
-          <span class="badge badge-new">Novo</span>
-        </div>
-        <h3>Jordan 4 Black Cat</h3>
-        <div class="meta"><div class="price">110€</div><div class="muted">Dostava ~2 tj.</div></div>
-        <div class="actions">
-          <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
-          <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
-        </div>
-      </article>
-
-      <!-- Jordan 4 Military Black -->
-      <article class="card"
-        data-id="jordan4-military-black"
-        data-name="Jordan 4 Military Black"
-        data-price="115"
-        data-brand="jordan"
-        data-sizes="40,41,42,43,44,45"
-        data-images='["slike/jordan4_military1.jpg","slike/jordan4_military2.jpg"]'>
-        <div class="img"><img src="slike/jordan4_military1.jpg" alt="Jordan 4 Military Black"></div>
-        <div class="badges">
-          <span class="badge">Tražen model</span>
-        </div>
-        <h3>Jordan 4 Military Black</h3>
-        <div class="meta"><div class="price">115€</div><div class="muted">Dostava ~2 tj.</div></div>
-        <div class="actions">
-          <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
-          <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
-        </div>
-      </article>
-
-      <!-- Jordan 1 University Blue -->
-      <article class="card"
-        data-id="jordan1-uni-blue"
-        data-name="Jordan 1 University Blue"
-        data-price="120"
-        data-brand="jordan"
-        data-sizes="38,39,40,41,42,43,44"
-        data-images='["slike/jordan1_uniblue1.jpg","slike/jordan1_uniblue2.jpg"]'>
-        <div class="img"><img src="slike/jordan1_uniblue1.jpg" alt="Jordan 1 University Blue"></div>
-        <div class="badges">
-          <span class="badge">Premium koža</span>
-        </div>
-        <h3>Jordan 1 University Blue</h3>
-        <div class="meta"><div class="price">120€</div><div class="muted">Dostava ~2 tj.</div></div>
-        <div class="actions">
-          <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
-          <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
-        </div>
-      </article>
-
-      <!-- Jordan 1 Mocha -->
-      <article class="card"
-        data-id="jordan1-mocha"
-        data-name="Jordan 1 Mocha"
-        data-price="125"
-        data-brand="jordan"
-        data-sizes="38,39,40,41,42,43,44,45"
-        data-images='["slike/jordan1_mocha1.jpg","slike/jordan1_mocha2.jpg"]'>
-        <div class="img"><img src="slike/jordan1_mocha1.jpg" alt="Jordan 1 Mocha"></div>
-        <div class="badges">
-          <span class="badge">Hype model</span>
-        </div>
-        <h3>Jordan 1 Mocha</h3>
-        <div class="meta"><div class="price">125€</div><div class="muted">Dostava ~2 tj.</div></div>
-        <div class="actions">
-          <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
-          <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
-        </div>
-      </article>
-
-      <!-- UGG Classic Mini -->
-      <article class="card"
-        data-id="ugg-classic-mini"
-        data-name="UGG Classic Mini"
-        data-price="70"
-        data-brand="ugg"
-        data-sizes="36,37,38,39,40,41"
-        data-images='["slike/ugg1.jpg","slike/ugg2.jpg"]'>
-        <div class="img"><img src="slike/ugg1.jpg" alt="UGG Classic Mini"></div>
-        <div class="badges">
-          <span class="badge">Popularno kod cura</span>
-        </div>
-        <h3>UGG Classic Mini</h3>
-        <div class="meta"><div class="price">70€</div><div class="muted">Dostava ~2 tj.</div></div>
-        <div class="actions">
-          <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
-          <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
-        </div>
-      </article>
-
-      <!-- Nike Air Max 90 -->
-      <article class="card"
-        data-id="nike-air-max-90"
-        data-name="Nike Air Max 90"
-        data-price="95"
-        data-brand="nike"
-        data-sizes="39,40,41,42,43,44"
-        data-images='["slike/airmax1.jpg","slike/airmax2.jpg"]'>
-        <div class="img"><img src="slike/airmax1.jpg" alt="Nike Air Max 90"></div>
-        <div class="badges">
-          <span class="badge">Klasični model</span>
-        </div>
-        <h3>Nike Air Max 90</h3>
-        <div class="meta"><div class="price">95€</div><div class="muted">Dostava ~2 tj.</div></div>
-        <div class="actions">
-          <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
-          <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
-        </div>
-      </article>
-
-      <!-- Nike Dunk Panda -->
-      <article class="card"
-        data-id="nike-dunk-panda"
-        data-name="Nike Dunk Low Panda"
-        data-price="100"
-        data-brand="nike"
-        data-sizes="37,38,39,40,41,42,43,44"
-        data-images='["slike/dunk_panda1.jpg","slike/dunk_panda2.jpg"]'>
-        <div class="img"><img src="slike/dunk_panda1.jpg" alt="Nike Dunk Low Panda"></div>
-        <div class="badges">
-          <span class="badge">Must have</span>
-        </div>
-        <h3>Nike Dunk Low Panda</h3>
-        <div class="meta"><div class="price">100€</div><div class="muted">Dostava ~2 tj.</div></div>
-        <div class="actions">
-          <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
-          <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
-        </div>
-      </article>
-
-      <!-- Yeezy Slide Bone -->
-      <article class="card"
-        data-id="yeezy-slide-bone"
-        data-name="Yeezy Slide Bone"
-        data-price="60"
-        data-brand="yeezy"
-        data-sizes="38,39,40,41,42,43,44,45"
-        data-images='["slike/slide_bone1.jpg","slike/slide_bone2.jpg"]'>
-        <div class="img"><img src="slike/slide_bone1.jpg" alt="Yeezy Slide Bone"></div>
-        <div class="badges">
-          <span class="badge">Ljeto / home fit</span>
-        </div>
-        <h3>Yeezy Slide Bone</h3>
-        <div class="meta"><div class="price">60€</div><div class="muted">Dostava ~2 tj.</div></div>
-        <div class="actions">
-          <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
-          <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
-        </div>
-      </article>
-
-      <!-- Adidas Campus 00s Grey -->
-      <article class="card"
-        data-id="campus-00s-grey"
-        data-name="Adidas Campus 00s Grey"
-        data-price="90"
-        data-brand="adidas"
-        data-sizes="37,38,39,40,41,42,43,44"
-        data-images='["slike/campus_grey1.jpg","slike/campus_grey2.jpg"]'>
-        <div class="img"><img src="slike/campus_grey1.jpg" alt="Adidas Campus 00s Grey"></div>
-        <div class="badges">
-          <span class="badge">Trendy model</span>
-        </div>
-        <h3>Adidas Campus 00s Grey</h3>
-        <div class="meta"><div class="price">90€</div><div class="muted">Dostava ~2 tj.</div></div>
-        <div class="actions">
-          <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
-          <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
-        </div>
-      </article>
-
-      <!-- Adidas Campus 00s Core Black -->
-      <article class="card"
-        data-id="campus-00s-black"
-        data-name="Adidas Campus 00s Core Black"
-        data-price="90"
-        data-brand="adidas"
-        data-sizes="37,38,39,40,41,42,43,44"
-        data-images='["slike/campus_black1.jpg","slike/campus_black2.jpg"]'>
-        <div class="img"><img src="slike/campus_black1.jpg" alt="Adidas Campus 00s Core Black"></div>
-        <div class="badges">
-          <span class="badge">Street style</span>
-        </div>
-        <h3>Adidas Campus 00s Core Black</h3>
-        <div class="meta"><div class="price">90€</div><div class="muted">Dostava ~2 tj.</div></div>
-        <div class="actions">
-          <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
-          <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
-        </div>
-      </article>
-
-      <!-- Air Force 1 Triple White -->
-      <article class="card"
-        data-id="af1-triple-white"
-        data-name="Air Force 1 Triple White"
-        data-price="85"
-        data-brand="nike"
-        data-sizes="36,37,38,39,40,41,42,43,44,45"
-        data-images='["slike/af1_white1.jpg","slike/af1_white2.jpg"]'>
-        <div class="img"><img src="slike/af1_white1.jpg" alt="Air Force 1 Triple White"></div>
-        <div class="badges">
-          <span class="badge">Always in stock</span>
-        </div>
-        <h3>Air Force 1 Triple White</h3>
-        <div class="meta"><div class="price">85€</div><div class="muted">Dostava ~2 tj.</div></div>
-        <div class="actions">
-          <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
-          <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
-        </div>
-      </article>
-    </section>
-
-    <!-- Zašto CRO.KICKS -->
-    <section class="why">
-      <div class="why-card">
-        <div class="why-title">Reference slike prije slanja</div>
-        <div class="why-text">Za svaki model šaljemo stvarne slike para koji ide tebi, direktno od dobavljača – znaš točno što dobivaš.</div>
+    <!-- Yeezy 350 Zebra -->
+    <article class="card"
+      data-id="yeezy-350-zebra"
+      data-name="Yeezy 350 Zebra"
+      data-price="120"
+      data-brand="yeezy"
+      data-sizes="37,38,39,40,41,42,43,44,45,46,47"
+      data-images='["slike/yeezy1.jpg","slike/yeezy2.jpg","slike/yeezy3.jpg"]'>
+      <div class="img">
+        <img src="slike/yeezy1.jpg" alt="Yeezy 350 Zebra">
       </div>
-      <div class="why-card">
-        <div class="why-title">Direktna komunikacija</div>
-        <div class="why-text">WhatsApp: savjet oko veličine, dodatne fotke, dostupnost modela i dogovor oko preuzimanja/dostave.</div>
+      <div class="badges">
+        <span class="badge badge-hot">TOP SELLER</span>
+        <span class="badge">Unisex</span>
       </div>
-      <div class="why-card">
-        <div class="why-title">Fokus na repeat kupce</div>
-        <div class="why-text">Ako si zadovoljan, vraćaš se. Ako ikad bude problem, rješavamo ga individualno i fer pristupom.</div>
+      <h3>Yeezy 350 Zebra</h3>
+      <div class="meta">
+        <div class="price">120€</div>
+        <div class="muted">Dostava ~2 tj.</div>
       </div>
-    </section>
-  </main>
+      <div class="actions">
+        <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
+        <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
+      </div>
+    </article>
 
+    <!-- Jordan 4 Black Cat -->
+    <article class="card"
+      data-id="jordan4-blackcat"
+      data-name="Jordan 4 Black Cat"
+      data-price="110"
+      data-brand="jordan"
+      data-sizes="40,41,42,43,44,45"
+      data-images='["slike/blackcat1.jpg","slike/blackcat2.jpg"]'>
+      <div class="img">
+        <img src="slike/blackcat1.jpg" alt="Jordan 4 Black Cat">
+      </div>
+      <div class="badges">
+        <span class="badge badge-new">Tražen model</span>
+      </div>
+      <h3>Jordan 4 Black Cat</h3>
+      <div class="meta">
+        <div class="price">110€</div>
+        <div class="muted">Dostava ~2 tj.</div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
+        <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
+      </div>
+    </article>
+
+    <!-- Air Force 1 Triple White -->
+    <article class="card"
+      data-id="af1-triple-white"
+      data-name="Air Force 1 Triple White"
+      data-price="85"
+      data-brand="nike"
+      data-sizes="36,37,38,39,40,41,42,43,44,45"
+      data-images='["slike/af1_white1.jpg","slike/af1_white2.jpg"]'>
+      <div class="img">
+        <img src="slike/af1_white1.jpg" alt="Air Force 1 Triple White">
+      </div>
+      <div class="badges">
+        <span class="badge">Classic</span>
+      </div>
+      <h3>Air Force 1 Triple White</h3>
+      <div class="meta">
+        <div class="price">85€</div>
+        <div class="muted">Dostava ~2 tj.</div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
+        <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
+      </div>
+    </article>
+
+    <!-- Nike Dunk Low Panda -->
+    <article class="card"
+      data-id="nike-dunk-panda"
+      data-name="Nike Dunk Low Panda"
+      data-price="100"
+      data-brand="nike"
+      data-sizes="37,38,39,40,41,42,43,44"
+      data-images='["slike/dunk_panda1.jpg","slike/dunk_panda2.jpg"]'>
+      <div class="img">
+        <img src="slike/dunk_panda1.jpg" alt="Nike Dunk Low Panda">
+      </div>
+      <div class="badges">
+        <span class="badge">Popularno</span>
+      </div>
+      <h3>Nike Dunk Low Panda</h3>
+      <div class="meta">
+        <div class="price">100€</div>
+        <div class="muted">Dostava ~2 tj.</div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
+        <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
+      </div>
+    </article>
+
+    <!-- Jordan 4 Military Black -->
+    <article class="card"
+      data-id="jordan4-military-black"
+      data-name="Jordan 4 Military Black"
+      data-price="115"
+      data-brand="jordan"
+      data-sizes="40,41,42,43,44,45"
+      data-images='["slike/jordan4_military1.jpg","slike/jordan4_military2.jpg"]'>
+      <div class="img">
+        <img src="slike/jordan4_military1.jpg" alt="Jordan 4 Military Black">
+      </div>
+      <div class="badges">
+        <span class="badge">Tražen model</span>
+      </div>
+      <h3>Jordan 4 Military Black</h3>
+      <div class="meta">
+        <div class="price">115€</div>
+        <div class="muted">Dostava ~2 tj.</div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
+        <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
+      </div>
+    </article>
+
+    <!-- Jordan 1 University Blue -->
+    <article class="card"
+      data-id="jordan1-uni-blue"
+      data-name="Jordan 1 University Blue"
+      data-price="120"
+      data-brand="jordan"
+      data-sizes="38,39,40,41,42,43,44"
+      data-images='["slike/jordan1_uniblue1.jpg","slike/jordan1_uniblue2.jpg"]'>
+      <div class="img">
+        <img src="slike/jordan1_uniblue1.jpg" alt="Jordan 1 University Blue">
+      </div>
+      <div class="badges">
+        <span class="badge">Premium koža</span>
+      </div>
+      <h3>Jordan 1 University Blue</h3>
+      <div class="meta">
+        <div class="price">120€</div>
+        <div class="muted">Dostava ~2 tj.</div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
+        <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
+      </div>
+    </article>
+
+    <!-- Jordan 1 Mocha -->
+    <article class="card"
+      data-id="jordan1-mocha"
+      data-name="Jordan 1 Mocha"
+      data-price="125"
+      data-brand="jordan"
+      data-sizes="38,39,40,41,42,43,44,45"
+      data-images='["slike/jordan1_mocha1.jpg","slike/jordan1_mocha2.jpg"]'>
+      <div class="img">
+        <img src="slike/jordan1_mocha1.jpg" alt="Jordan 1 Mocha">
+      </div>
+      <div class="badges">
+        <span class="badge">Hype model</span>
+      </div>
+      <h3>Jordan 1 Mocha</h3>
+      <div class="meta">
+        <div class="price">125€</div>
+        <div class="muted">Dostava ~2 tj.</div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
+        <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
+      </div>
+    </article>
+
+    <!-- UGG Classic Mini -->
+    <article class="card"
+      data-id="ugg-classic-mini"
+      data-name="UGG Classic Mini"
+      data-price="70"
+      data-brand="ugg"
+      data-sizes="36,37,38,39,40,41"
+      data-images='["slike/ugg1.jpg","slike/ugg2.jpg"]'>
+      <div class="img">
+        <img src="slike/ugg1.jpg" alt="UGG Classic Mini">
+      </div>
+      <div class="badges">
+        <span class="badge">Popularno kod cura</span>
+      </div>
+      <h3>UGG Classic Mini</h3>
+      <div class="meta">
+        <div class="price">70€</div>
+        <div class="muted">Dostava ~2 tj.</div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
+        <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
+      </div>
+    </article>
+
+    <!-- Yeezy Slide Bone -->
+    <article class="card"
+      data-id="yeezy-slide-bone"
+      data-name="Yeezy Slide Bone"
+      data-price="60"
+      data-brand="yeezy"
+      data-sizes="38,39,40,41,42,43,44,45"
+      data-images='["slike/slide_bone1.jpg","slike/slide_bone2.jpg"]'>
+      <div class="img">
+        <img src="slike/slide_bone1.jpg" alt="Yeezy Slide Bone">
+      </div>
+      <div class="badges">
+        <span class="badge">Ljeto / home fit</span>
+      </div>
+      <h3>Yeezy Slide Bone</h3>
+      <div class="meta">
+        <div class="price">60€</div>
+        <div class="muted">Dostava ~2 tj.</div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
+        <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- WHY SECTION -->
+  <section class="why">
+    <div class="why-card">
+      <div class="why-title">Reference slike prije slanja</div>
+      <div class="why-text">Za svaki model šaljemo realne slike para koji ide baš tebi — nema iznenađenja.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-title">Direktno preko WhatsApp-a</div>
+      <div class="why-text">Pitanja oko veličine, dostupnosti, dodatne slike, dogovor oko preuzimanja ili dostave.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-title">Fokus na dugoročne kupce</div>
+      <div class="why-text">Ako ikad bude problem, rješavamo individualno i fer. Zadovoljan kupac = vraća se opet.</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    Instagram & TikTok: <a class="link" href="https://instagram.com/cro.kicks_" target="_blank">@cro.kicks_</a> • Kontakt: <a class="link" href="mailto:info@crokicks.hr">info@crokicks.hr</a> • WhatsApp: 095 528 6672
+    Instagram: <a class="link" href="https://instagram.com/cro.kicks_" target="_blank">@cro.kicks_</a> •  
+    WhatsApp: 095 528 6672 •  
+    E-mail: <a class="link" href="mailto:info@crokicks.hr">info@crokicks.hr</a>
   </footer>
+
 </div>
 
-<!-- MODAL NARUDŽBA -->
+<!-- ORDER MODAL -->
 <div class="modal" id="orderModal">
   <div class="box">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
       <strong id="orderTitle">Naruči</strong>
-      <button onclick="closeOrder()" style="background:transparent;border:none;color:var(--muted);font-size:18px">✕</button>
+      <button onclick="closeOrder()" style="background:transparent;border:none;color:var(--muted);font-size:20px">✕</button>
     </div>
-    <div>
-      <label for="sizeSelect">Veličina</label>
-      <select id="sizeSelect"></select>
 
-      <label for="nameInput">Ime i prezime (obavezno)</label>
-      <input id="nameInput" type="text" placeholder="npr. Ivan Horvat" />
+    <label for="sizeSelect">Veličina</label>
+    <select id="sizeSelect"></select>
 
-      <label for="phoneInput">Broj telefona (WhatsApp) (obavezno)</label>
-      <input id="phoneInput" type="text" placeholder="0955286672" />
+    <label for="nameInput">Ime i prezime (obavezno)</label>
+    <input id="nameInput" type="text" placeholder="npr. Ivan Horvat">
 
-      <label for="countryInput">Država</label>
-      <input id="countryInput" type="text" placeholder="Hrvatska" />
+    <label for="phoneInput">Broj telefona (WhatsApp)</label>
+    <input id="phoneInput" type="text" placeholder="0955286672">
 
-      <label for="regionInput">Županija / Regija</label>
-      <input id="regionInput" type="text" placeholder="Zagrebačka" />
+    <label for="countryInput">Država</label>
+    <input id="countryInput" type="text" placeholder="Hrvatska">
 
-      <label for="cityInput">Grad</label>
-      <input id="cityInput" type="text" placeholder="Zagreb" />
+    <label for="regionInput">Županija / Regija</label>
+    <input id="regionInput" type="text" placeholder="Zagrebačka">
 
-      <label for="addressInput">Točna adresa</label>
-      <input id="addressInput" type="text" placeholder="Ulica i broj" />
+    <label for="cityInput">Grad</label>
+    <input id="cityInput" type="text" placeholder="Zagreb">
 
-      <label for="zipInput">Poštanski broj</label>
-      <input id="zipInput" type="text" placeholder="10000" />
+    <label for="addressInput">Točna adresa</label>
+    <input id="addressInput" type="text" placeholder="Ulica i broj">
 
-      <div class="small">Klikom na "Pošalji WhatsApp" otvara se chat s unaprijed popunjenom porukom (model, veličina i adresa).</div>
+    <label for="zipInput">Poštanski broj</label>
+    <input id="zipInput" type="text" placeholder="10000">
 
-      <div style="display:flex;gap:8px;margin-top:10px">
-        <button class="btn btn-order" style="flex:1" onclick="sendWhatsApp()">Pošalji WhatsApp</button>
-        <button class="btn btn-info" style="flex:1" onclick="sendEmail()">Pošalji e-mail</button>
-      </div>
+    <div class="small">Klikom na “Pošalji WhatsApp” otvara se chat s popunjenom porukom (model, veličina, adresa...).</div>
 
-      <div style="margin-top:8px;text-align:center">
-        Ili pošalji Instagram DM: <a class="link" href="https://instagram.com/cro.kicks_" target="_blank">@cro.kicks_</a>
-      </div>
+    <div style="display:flex;gap:10px;margin-top:10px">
+      <button class="btn btn-order" onclick="sendWhatsApp()">Pošalji WhatsApp</button>
+      <button class="btn btn-info" onclick="sendEmail()">Pošalji e-mail</button>
+    </div>
+
+    <div style="margin-top:8px;font-size:12px;color:var(--muted);text-align:center">
+      Ili pošalji Instagram DM: <a class="link" href="https://instagram.com/cro.kicks_" target="_blank">@cro.kicks_</a>
     </div>
   </div>
 </div>
@@ -801,14 +791,16 @@ select,input[type="text"]{
 <div class="detail-overlay" id="detailOverlay">
   <div class="detail-inner">
     <div class="detail-header">
-      <div id="detailTitle" style="font-weight:600;font-size:18px">Detalji</div>
-      <button onclick="closeDetail()" style="background:transparent;border:none;color:var(--muted);font-size:20px">✕</button>
+      <div id="detailTitle" style="font-size:20px;font-weight:700"></div>
+      <button onclick="closeDetail()" style="background:transparent;border:none;color:var(--muted);font-size:24px">✕</button>
     </div>
+
     <div class="detail-layout">
       <div class="detail-left">
         <div id="mainImage"><img src="" alt=""></div>
         <div class="gallery" id="detailGallery"></div>
       </div>
+
       <div class="detail-right">
         <div class="detail-price" id="detailPrice"></div>
         <div class="detail-meta">Dostava ~2 tjedna • Reference slike dostupne prije slanja</div>
@@ -818,7 +810,7 @@ select,input[type="text"]{
 
         <div class="detail-section-title">Napomena</div>
         <div class="detail-meta">
-          Imamo dodatne slike (uključujući fotke od dobavljača prije slanja). Javi se preko WhatsApp-a ili Instagram DM-a za još referenci.
+          Na zahtjev šaljemo dodatne slike (uključujući fotke od dobavljača prije slanja) za svaki model.
         </div>
 
         <div class="detail-section-title">Preporučeni modeli</div>
@@ -826,8 +818,8 @@ select,input[type="text"]{
 
         <div class="detail-section-title">Recenzije kupaca</div>
         <div class="detail-reviews">
-          <p>⭐️⭐️⭐️⭐️⭐️ “Brza komunikacija, slike prije slanja i točna veličina. Uzeo Yeezy Zebra, prezadovoljan.”</p>
-          <p>⭐️⭐️⭐️⭐️ “Stiglo za oko 2 tjedna, Jordan 4 su brutalne. Uzet ću opet sigurno.”</p>
+          <p>⭐️⭐️⭐️⭐️⭐️ “Brza komunikacija, Yeezy Zebra je došla identična slikama. Svaka preporuka.”</p>
+          <p>⭐️⭐️⭐️⭐️ “Jordan 4 su brutalne, veličina pogođena. Uzet ću opet sigurno.”</p>
         </div>
 
         <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap">
@@ -839,144 +831,124 @@ select,input[type="text"]{
   </div>
 </div>
 
-<!-- STICKY BAR ZA DETALJE -->
+<!-- STICKY DETAIL BAR -->
 <div class="detail-sticky" id="detailSticky">
   <div class="detail-sticky-inner">
     <div>
-      <div style="font-size:13px;color:var(--muted);" id="detailStickyName"></div>
-      <div class="detail-sticky-price" id="detailStickyPrice"></div>
+      <div id="detailStickyName" style="font-size:13px;color:var(--muted)"></div>
+      <div id="detailStickyPrice" class="detail-sticky-price"></div>
     </div>
     <button onclick="orderFromDetail()">Naruči odmah</button>
   </div>
 </div>
 
 <script>
-const WA_PHONE = '385955286672'; // 0955286672 u WA formatu
-const SELLER_EMAIL = 'info@crokicks.hr';
+  const WA_PHONE = "385955286672"; // 0955286672
+  const EMAIL = "info@crokicks.hr";
 
-const catalogEl = document.getElementById('catalog');
-let cardNodes = Array.from(catalogEl.querySelectorAll('.card'));
-let currentProduct = null;
-let selectedSize = null;
+  const catalogEl = document.getElementById("catalog");
+  let cardNodes = Array.from(catalogEl.querySelectorAll(".card"));
+  let currentProduct = null;
+  let selectedSize = null;
 
-/* HERO CAROUSEL AUTO */
-const slides = Array.from(document.querySelectorAll('.hero-slide'));
-const dots = Array.from(document.querySelectorAll('.hero-dot'));
-let heroIndex = 0;
-function showHeroSlide(i){
-  heroIndex = i;
-  slides.forEach((s,idx)=>{s.classList.toggle('active',idx===i);});
-  dots.forEach((d,idx)=>{d.classList.toggle('active',idx===i);});
-}
-dots.forEach(d=>{
-  d.addEventListener('click',()=>showHeroSlide(parseInt(d.dataset.index,10)));
-});
-setInterval(()=>{
-  heroIndex = (heroIndex+1) % slides.length;
-  showHeroSlide(heroIndex);
-}, 6000);
+  /* Scroll to catalog */
+  function scrollToCatalog(){
+    document.getElementById("catalog").scrollIntoView({behavior:"smooth"});
+  }
 
-/* Scroll na katalog */
-function scrollToCatalog(){
-  const cat = document.getElementById('catalog');
-  if(cat) cat.scrollIntoView({behavior:'smooth'});
-}
+  /* WhatsApp general */
+  function openWhatsAppGeneral(){
+    const msg = encodeURIComponent("Pozdrav! Zanima me dostupnost modela 👟");
+    window.open(`https://wa.me/${WA_PHONE}?text=${msg}`,"_blank");
+  }
 
-/* Otvori generalni WA chat */
-function openWhatsAppGeneral(){
-  const text = "Pozdrav, imam pitanje za CRO.KICKS 🔥";
-  const encoded = encodeURIComponent(text);
-  window.open(`https://wa.me/${WA_PHONE}?text=${encoded}`,'_blank');
-}
+  /* Filters */
+  function applyFilters(){
+    const searchVal = (document.getElementById("searchInput").value || "").toLowerCase();
+    const brandVal = document.getElementById("brandFilter").value || "";
+    const sizeVal = document.getElementById("sizeFilter").value || "";
+    const sortVal = document.getElementById("sortSelect").value || "";
 
-/* Filteri i sortiranje */
-function applyFilters(){
-  const searchVal = (document.getElementById('searchInput').value || '').toLowerCase();
-  const brandVal = (document.getElementById('brandFilter').value || '').toLowerCase();
-  const sizeVal = document.getElementById('sizeFilter').value || '';
-  const sortVal = document.getElementById('sortSelect').value || '';
+    cardNodes.forEach(card=>{
+      const name = (card.dataset.name||"").toLowerCase();
+      const brand = (card.dataset.brand||"").toLowerCase();
+      const sizes = (card.dataset.sizes||"").split(",").map(s=>s.trim());
+      let visible = true;
 
-  cardNodes.forEach(card=>{
-    const name = (card.dataset.name||'').toLowerCase();
-    const brand = (card.dataset.brand||'').toLowerCase();
-    const sizes = (card.dataset.sizes||'').split(',').map(s=>s.trim());
-    let visible = true;
+      if(searchVal && !name.includes(searchVal) && !brand.includes(searchVal)) visible = false;
+      if(brandVal && brand !== brandVal) visible = false;
+      if(sizeVal && !sizes.includes(sizeVal)) visible = false;
 
-    if(searchVal && !name.includes(searchVal) && !brand.includes(searchVal)) visible=false;
-    if(brandVal && brand !== brandVal) visible=false;
-    if(sizeVal && !sizes.includes(sizeVal)) visible=false;
-
-    card.style.display = visible ? '' : 'none';
-  });
-
-  let visibleCards = cardNodes.filter(c=>c.style.display !== 'none');
-  if(sortVal){
-    visibleCards.sort((a,b)=>{
-      const priceA = parseFloat(a.dataset.price||'0');
-      const priceB = parseFloat(b.dataset.price||'0');
-      const nameA = (a.dataset.name||'').toLowerCase();
-      const nameB = (b.dataset.name||'').toLowerCase();
-      if(sortVal==='price-asc') return priceA-priceB;
-      if(sortVal==='price-desc') return priceB-priceA;
-      if(sortVal==='name-asc') return nameA.localeCompare(nameB);
-      return 0;
+      card.style.display = visible ? "" : "none";
     });
-    visibleCards.forEach(c=>catalogEl.appendChild(c));
-  }
-}
 
-/* NARUDŽBA */
-function openOrder(btnLike){
-  const card = btnLike.closest ? btnLike.closest('.card') : btnLike.closest();
-  if(!card) return;
-  currentProduct = {
-    id: card.dataset.id,
-    name: card.dataset.name,
-    price: card.dataset.price,
-    brand: card.dataset.brand,
-    sizes: (card.dataset.sizes||'').split(',').map(s=>s.trim()).filter(Boolean),
-    images: JSON.parse(card.dataset.images || '[]')
-  };
-
-  document.getElementById('orderTitle').textContent = 'Naruči — ' + currentProduct.name;
-
-  const select = document.getElementById('sizeSelect');
-  select.innerHTML = '';
-  currentProduct.sizes.forEach(sz=>{
-    const opt = document.createElement('option');
-    opt.value = sz;
-    opt.textContent = sz;
-    select.appendChild(opt);
-  });
-
-  if(selectedSize && currentProduct.sizes.includes(selectedSize)){
-    select.value = selectedSize;
+    let visibleCards = cardNodes.filter(c=>c.style.display !== "none");
+    if(sortVal){
+      visibleCards.sort((a,b)=>{
+        const priceA = parseFloat(a.dataset.price||"0");
+        const priceB = parseFloat(b.dataset.price||"0");
+        const nameA = (a.dataset.name||"").toLowerCase();
+        const nameB = (b.dataset.name||"").toLowerCase();
+        if(sortVal === "price-asc") return priceA-priceB;
+        if(sortVal === "price-desc") return priceB-priceA;
+        if(sortVal === "name-asc") return nameA.localeCompare(nameB);
+        return 0;
+      });
+      visibleCards.forEach(c=>catalogEl.appendChild(c));
+    }
   }
 
-  document.getElementById('orderModal').style.display='flex';
-}
+  /* Open order modal */
+  function openOrder(btnLike){
+    const card = btnLike.closest ? btnLike.closest(".card") : btnLike.closest();
+    if(!card) return;
+    currentProduct = {
+      id: card.dataset.id,
+      name: card.dataset.name,
+      price: card.dataset.price,
+      brand: card.dataset.brand,
+      sizes: (card.dataset.sizes||"").split(",").map(s=>s.trim()).filter(Boolean),
+      images: JSON.parse(card.dataset.images || "[]")
+    };
 
-function closeOrder(){
-  document.getElementById('orderModal').style.display='none';
-}
+    document.getElementById("orderTitle").textContent = "Naruči — " + currentProduct.name;
+    const select = document.getElementById("sizeSelect");
+    select.innerHTML = "";
+    currentProduct.sizes.forEach(sz=>{
+      const opt = document.createElement("option");
+      opt.value = sz;
+      opt.textContent = sz;
+      select.appendChild(opt);
+    });
 
-function sendWhatsApp(){
-  if(!currentProduct){alert('Greška: nema odabranog proizvoda.');return;}
-  const nameRaw = document.getElementById('nameInput').value.trim();
-  const phoneRaw = document.getElementById('phoneInput').value.trim();
-  const sizeRaw = document.getElementById('sizeSelect').value || '';
-  const countryRaw = document.getElementById('countryInput').value.trim();
-  const regionRaw = document.getElementById('regionInput').value.trim();
-  const cityRaw = document.getElementById('cityInput').value.trim();
-  const addressRaw = document.getElementById('addressInput').value.trim();
-  const zipRaw = document.getElementById('zipInput').value.trim();
+    if(selectedSize && currentProduct.sizes.includes(selectedSize)){
+      select.value = selectedSize;
+    }
 
-  if(!nameRaw||!phoneRaw||!countryRaw||!regionRaw||!cityRaw||!addressRaw||!zipRaw||!sizeRaw){
-    alert('Molimo ispunite sva obavezna polja i veličinu.');
-    return;
+    document.getElementById("orderModal").style.display = "flex";
   }
 
-  const text = `Pozdrav, želim naručiti:
+  function closeOrder(){
+    document.getElementById("orderModal").style.display = "none";
+  }
+
+  function sendWhatsApp(){
+    if(!currentProduct){alert("Greška: nema odabranog proizvoda.");return;}
+    const sizeRaw = document.getElementById("sizeSelect").value || "";
+    const nameRaw = document.getElementById("nameInput").value.trim();
+    const phoneRaw = document.getElementById("phoneInput").value.trim();
+    const countryRaw = document.getElementById("countryInput").value.trim();
+    const regionRaw = document.getElementById("regionInput").value.trim();
+    const cityRaw = document.getElementById("cityInput").value.trim();
+    const addressRaw = document.getElementById("addressInput").value.trim();
+    const zipRaw = document.getElementById("zipInput").value.trim();
+
+    if(!sizeRaw || !nameRaw || !phoneRaw || !countryRaw || !regionRaw || !cityRaw || !addressRaw || !zipRaw){
+      alert("Molimo ispuni sva polja i odaberi veličinu.");
+      return;
+    }
+
+    const text = `Pozdrav, želim naručiti:
 Model: ${currentProduct.name}
 Veličina: ${sizeRaw}
 Ime: ${nameRaw}
@@ -987,130 +959,131 @@ Grad: ${cityRaw}
 Adresa: ${addressRaw}
 Poštanski broj: ${zipRaw}`;
 
-  const encoded = encodeURIComponent(text);
-  window.open(`https://wa.me/${WA_PHONE}?text=${encoded}`,'_blank');
-}
-
-function sendEmail(){
-  if(!currentProduct){alert('Greška: nema odabranog proizvoda.');return;}
-  const nameRaw = document.getElementById('nameInput').value.trim();
-  const phoneRaw = document.getElementById('phoneInput').value.trim();
-  const sizeRaw = document.getElementById('sizeSelect').value || '';
-  const countryRaw = document.getElementById('countryInput').value.trim();
-  const regionRaw = document.getElementById('regionInput').value.trim();
-  const cityRaw = document.getElementById('cityInput').value.trim();
-  const addressRaw = document.getElementById('addressInput').value.trim();
-  const zipRaw = document.getElementById('zipInput').value.trim();
-
-  if(!nameRaw||!phoneRaw||!countryRaw||!regionRaw||!cityRaw||!addressRaw||!zipRaw||!sizeRaw){
-    alert('Molimo ispunite sva obavezna polja i veličinu.');
-    return;
+    const encoded = encodeURIComponent(text);
+    window.open(`https://wa.me/${WA_PHONE}?text=${encoded}`,"_blank");
   }
 
-  const subject = encodeURIComponent('Narudžba — ' + currentProduct.name);
-  const body = encodeURIComponent(
+  function sendEmail(){
+    if(!currentProduct){alert("Greška: nema odabranog proizvoda.");return;}
+    const sizeRaw = document.getElementById("sizeSelect").value || "";
+    const nameRaw = document.getElementById("nameInput").value.trim();
+    const phoneRaw = document.getElementById("phoneInput").value.trim();
+
+    const subject = encodeURIComponent("Narudžba — " + currentProduct.name);
+    const body = encodeURIComponent(
 `Model: ${currentProduct.name}
 Veličina: ${sizeRaw}
 Ime: ${nameRaw}
 Broj: ${phoneRaw}
-Država: ${countryRaw}
-Županija/Regija: ${regionRaw}
-Grad: ${cityRaw}
-Adresa: ${addressRaw}
-Poštanski broj: ${zipRaw}
 Cijena: ${currentProduct.price}€`
-  );
-  window.location.href = `mailto:${SELLER_EMAIL}?subject=${subject}&body=${body}`;
-}
-
-/* DETALJI */
-function openDetail(btn){
-  const card = btn.closest('.card');
-  if(!card) return;
-
-  currentProduct = {
-    id: card.dataset.id,
-    name: card.dataset.name,
-    price: card.dataset.price,
-    brand: card.dataset.brand,
-    sizes: (card.dataset.sizes||'').split(',').map(s=>s.trim()).filter(Boolean),
-    images: JSON.parse(card.dataset.images || '[]')
-  };
-  selectedSize = null;
-
-  document.getElementById('detailTitle').textContent = currentProduct.name;
-  document.getElementById('detailPrice').textContent = currentProduct.price + '€';
-  document.getElementById('detailStickyName').textContent = currentProduct.name;
-  document.getElementById('detailStickyPrice').textContent = currentProduct.price + '€';
-
-  const mainImg = document.querySelector('#mainImage img');
-  const gallery = document.getElementById('detailGallery');
-  gallery.innerHTML = '';
-  if(currentProduct.images.length>0){
-    mainImg.src = currentProduct.images[0];
-  }else{
-    mainImg.src = '';
+    );
+    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
   }
-  currentProduct.images.forEach(src=>{
-    const img = document.createElement('img');
-    img.src = src;
-    img.onclick = ()=>{ mainImg.src = src; };
-    gallery.appendChild(img);
-  });
 
-  const sizesWrap = document.getElementById('detailSizes');
-  sizesWrap.innerHTML = '';
-  currentProduct.sizes.forEach(sz=>{
-    const span = document.createElement('span');
-    span.textContent = sz;
-    span.onclick = ()=>{
-      selectedSize = sz;
-      Array.from(sizesWrap.children).forEach(c=>c.classList.remove('selected'));
-      span.classList.add('selected');
+  /* Details */
+  function openDetail(btn){
+    const card = btn.closest(".card");
+    if(!card) return;
+
+    currentProduct = {
+      id: card.dataset.id,
+      name: card.dataset.name,
+      price: card.dataset.price,
+      brand: card.dataset.brand,
+      sizes: (card.dataset.sizes||"").split(",").map(s=>s.trim()).filter(Boolean),
+      images: JSON.parse(card.dataset.images || "[]")
     };
-    sizesWrap.appendChild(span);
-  });
+    selectedSize = null;
 
-  const recWrap = document.getElementById('detailRecs');
-  recWrap.innerHTML = '';
-  cardNodes.forEach(c=>{
-    if(c.dataset.id !== currentProduct.id){
-      const div = document.createElement('div');
-      div.className = 'detail-rec-item';
-      div.textContent = c.dataset.name + ' • ' + (c.dataset.price||'') + '€';
-      div.onclick = ()=>openDetailFromCard(c);
-      recWrap.appendChild(div);
+    document.getElementById("detailTitle").textContent = currentProduct.name;
+    document.getElementById("detailPrice").textContent = currentProduct.price + "€";
+    document.getElementById("detailStickyName").textContent = currentProduct.name;
+    document.getElementById("detailStickyPrice").textContent = currentProduct.price + "€";
+
+    const mainImg = document.querySelector("#mainImage img");
+    const gallery = document.getElementById("detailGallery");
+    gallery.innerHTML = "";
+    if(currentProduct.images.length > 0){
+      mainImg.src = currentProduct.images[0];
+    }else{
+      mainImg.src = "";
     }
-  });
-
-  document.getElementById('detailOverlay').style.display='block';
-  document.getElementById('detailSticky').style.display='block';
-}
-
-function openDetailFromCard(card){
-  openDetail({closest:()=>card});
-}
-
-function closeDetail(){
-  document.getElementById('detailOverlay').style.display='none';
-  document.getElementById('detailSticky').style.display='none';
-}
-
-/* Naruči iz detalja – modal preko detalja */
-function orderFromDetail(){
-  const card = cardNodes.find(c=>c.dataset.id === currentProduct.id);
-  if(!card){alert('Greška s proizvodom.');return;}
-  openOrder({closest:()=>card});
-  if(selectedSize){
-    const select = document.getElementById('sizeSelect');
-    Array.from(select.options).forEach(o=>{
-      if(o.value === selectedSize) select.value = selectedSize;
+    currentProduct.images.forEach(src=>{
+      const img = document.createElement("img");
+      img.src = src;
+      img.onclick = ()=>{ mainImg.src = src; };
+      gallery.appendChild(img);
     });
-  }
-}
 
-/* init */
-applyFilters();
+    const sizesWrap = document.getElementById("detailSizes");
+    sizesWrap.innerHTML = "";
+    currentProduct.sizes.forEach(sz=>{
+      const span = document.createElement("span");
+      span.textContent = sz;
+      span.onclick = ()=>{
+        selectedSize = sz;
+        Array.from(sizesWrap.children).forEach(c=>c.classList.remove("selected"));
+        span.classList.add("selected");
+      };
+      sizesWrap.appendChild(span);
+    });
+
+    const recWrap = document.getElementById("detailRecs");
+    recWrap.innerHTML = "";
+    cardNodes.forEach(c=>{
+      if(c.dataset.id !== currentProduct.id){
+        const div = document.createElement("div");
+        div.className = "detail-rec-item";
+        div.textContent = c.dataset.name + " • " + (c.dataset.price||"") + "€";
+        div.onclick = ()=>openDetailFromCard(c);
+        recWrap.appendChild(div);
+      }
+    });
+
+    document.getElementById("detailOverlay").style.display = "block";
+    document.getElementById("detailSticky").style.display = "block";
+  }
+
+  function openDetailFromCard(card){
+    openDetail({closest:()=>card});
+  }
+
+  function closeDetail(){
+    document.getElementById("detailOverlay").style.display = "none";
+    document.getElementById("detailSticky").style.display = "none";
+  }
+
+  function orderFromDetail(){
+    const card = cardNodes.find(c=>c.dataset.id === currentProduct.id);
+    if(!card){alert("Greška s proizvodom.");return;}
+    openOrder({closest:()=>card});
+    if(selectedSize){
+      const select = document.getElementById("sizeSelect");
+      Array.from(select.options).forEach(o=>{
+        if(o.value === selectedSize) select.value = selectedSize;
+      });
+    }
+  }
+
+  /* HERO CAROUSEL */
+  const slides = Array.from(document.querySelectorAll(".hero-slide"));
+  const dots = Array.from(document.querySelectorAll(".hero-dot"));
+  let heroIndex = 0;
+
+  function showHeroSlide(i){
+    heroIndex = i;
+    slides.forEach((s,idx)=>s.classList.toggle("active",idx===i));
+    dots.forEach((d,idx)=>d.classList.toggle("active",idx===i));
+  }
+  dots.forEach(d=>{
+    d.addEventListener("click",()=>showHeroSlide(parseInt(d.dataset.index,10)));
+  });
+  setInterval(()=>{
+    heroIndex = (heroIndex+1) % slides.length;
+    showHeroSlide(heroIndex);
+  }, 6000);
+
+  applyFilters();
 </script>
 </body>
 </html>
