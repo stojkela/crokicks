@@ -29,7 +29,14 @@ body{
   background:var(--bg);color:var(--white);
 }
 
-.wrap{max-width:1100px;margin:0 auto;padding:16px 16px 60px;}
+.wrap{
+  max-width:1200px;
+  margin:0 auto;
+  padding:16px 16px 80px;
+  width:100%;
+}
+
+
 
 header{
   display:flex;align-items:center;justify-content:space-between;
@@ -201,13 +208,22 @@ header{
   .toolbar-group.half{flex:1;}
 }
 
-/* Grid / cards */
 .grid{
   margin-top:18px;
-  display:grid;grid-template-columns:1fr;gap:18px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+  width:100%;
 }
-@media(min-width:700px){.grid{grid-template-columns:repeat(2,1fr);}}
-@media(min-width:1020px){.grid{grid-template-columns:repeat(3,1fr);}}
+
+@media(min-width:700px){
+  .grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(min-width:1020px){
+  .grid{grid-template-columns:repeat(3,1fr);}
+}
+
+
 
 .card{
   background:var(--card);border-radius:18px;
@@ -243,16 +259,33 @@ h3{font-size:18px;font-weight:600;margin-top:2px;}
 .btn-info{background:transparent;border:1px solid rgba(255,255,255,.18);color:var(--white);}
 .btn-info:hover{background:rgba(255,255,255,.06);}
 
-/* Why sekcija */
-.why{
-  margin-top:28px;display:grid;gap:12px;
+/* WHY sekcija – centrirana i full width */
+.why {
+  margin: 48px auto 0;
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
 }
-@media(min-width:800px){.why{grid-template-columns:repeat(3,1fr);}}
-.why-card{
-  background:#101011;border-radius:14px;padding:12px 13px;
+
+@media (min-width: 720px) {
+  .why {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-.why-title{font-size:14px;font-weight:600;margin-bottom:4px;}
-.why-text{font-size:13px;color:var(--muted);}
+
+.why-card {
+  background: linear-gradient(180deg, #121212, #0e0e0e);
+  border-radius: 18px;
+  padding: 20px;
+  min-height: 120px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.55);
+}
+
+
+
+
 
 /* Footer */
 footer{
@@ -395,112 +428,73 @@ footer a:hover{text-decoration:underline;}
 </section>
 
 <main>
-  <!-- KATALOG -->
+  <main>
+
   <section class="grid" id="catalog">
-   <article class="card"
-  data-id="yeezy-350-zebra"
-  data-name="Yeezy 350 Zebra"
-  data-price="120"
-  data-brand="yeezy"
-  data-sizes="37,38,39,40,41,42,43,44,45,46,47"
+    <article class="card"
+  data-id="MODEL-ID"
+  data-name="IME MODELA"
+  data-price="CIJENA"
+  data-brand="brand"
+  data-sizes="36,37,38,39,40,41,42,43,44,45"
   data-images='[
-    "slike/yeezy-main.jpg",
-    "slike/yeezy-1.jpg",
-    "slike/yeezy-2.jpg",
-    "slike/yeezy-3.jpg"
+    "slike/model-main.jpg",
+    "slike/model-1.jpg",
+    "slike/model-2.jpg",
+    "slike/model-3.jpg"
   ]'>
+
   <div class="card-img">
-    <img src="slike/yeezy-main.jpg" alt="Yeezy 350 Zebra">
+    <img src="slike/model-main.jpg" alt="IME MODELA">
   </div>
+
   <div class="badges">
-    <span class="badge badge-hot">TOP SELLER</span>
+    <span class="badge badge-new">NEW</span>
+    <!-- ili badge-hot / makni ako ne treba -->
   </div>
-  <h3>Yeezy 350 Zebra</h3>
+
+  <h3>IME MODELA</h3>
+
   <div class="meta">
-    <span class="price">120€</span>
+    <span class="price">CIJENA€</span>
     <span>Dostava ~2 tj.</span>
   </div>
+
   <div class="actions">
     <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
     <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
   </div>
+
 </article>
 
-<article class="card"
-  data-id="jordan-4-blackcat"
-  data-name="Jordan 4 Black Cat"
-  data-price="110"
-  data-brand="jordan"
-  data-sizes="40,41,42,43,44,45"
-  data-images='[
-    "slike/blackcat-main.jpg",
-    "slike/blackcat-1.jpg",
-    "slike/blackcat-2.jpg",
-    "slike/blackcat-3.jpg"
-  ]'>
-  <div class="card-img">
-    <img src="slike/blackcat-main.jpg" alt="Jordan 4 Black Cat">
-  </div>
-  <div class="badges">
-    <span class="badge badge-new">HYPE</span>
-  </div>
-  <h3>Jordan 4 Black Cat</h3>
-  <div class="meta">
-    <span class="price">110€</span>
-    <span>Dostava ~2 tj.</span>
-  </div>
-  <div class="actions">
-    <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
-    <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
-  </div>
-</article>
+  </section>
 
-
-  <article class="card"
-  data-id="nike-dunk-panda"
-  data-name="Nike Dunk Low Panda"
-  data-price="100"
-  data-brand="nike"
-  data-sizes="37,38,39,40,41,42,43,44"
-  data-images='[
-    "slike/dunk-main.jpg",
-    "slike/dunk-1.jpg",
-    "slike/dunk-2.jpg",
-    "slike/dunk-3.jpg"
-  ]'>
-  <div class="card-img">
-    <img src="slike/dunk-main.jpg" alt="Nike Dunk Low Panda">
-  </div>
-  <div class="badges">
-    <span class="badge">Popularno</span>
-  </div>
-  <h3>Nike Dunk Low Panda</h3>
-  <div class="meta">
-    <span class="price">100€</span>
-    <span>Dostava ~2 tj.</span>
-  </div>
-  <div class="actions">
-    <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
-    <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
-  </div>
-</article>
-
-
-  <!-- ZAŠTO CRO.KICKS -->
   <section class="why">
     <div class="why-card">
       <div class="why-title">Slike para prije slanja</div>
-      <div class="why-text">Za svaki par možeš dobiti reference fotke direktno od dobavljača.</div>
+      <div class="why-text">
+        Za svaki par možeš dobiti reference fotke direktno od dobavljača.
+      </div>
     </div>
+
     <div class="why-card">
       <div class="why-title">WhatsApp komunikacija</div>
-      <div class="why-text">Brz dogovor oko veličine, dostupnosti i dostave. 095 528 6672.</div>
+      <div class="why-text">
+        Brz dogovor oko veličine, dostupnosti i dostave. 095 528 6672.
+      </div>
     </div>
+
     <div class="why-card">
       <div class="why-title">Repeat kupci</div>
-      <div class="why-text">Fokus nam je da budeš zadovoljan i da se vratiš po drugi par.</div>
+      <div class="why-text">
+        Fokus nam je da budeš zadovoljan i da se vratiš po drugi par.
+      </div>
     </div>
   </section>
+
+</main>
+
+
 </main>
 
 <footer>
