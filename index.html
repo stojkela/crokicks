@@ -52,7 +52,8 @@ header{
 
 /* HERO WRAPPER */
 .hero {
-    position: relative;
+   position: relative;
+  z-index: 3;
     width: 100%;
     height: 420px;
     border-radius: 18px;
@@ -104,17 +105,23 @@ header{
 
 /* MOBILE FIX — IMAGE FULLY VISIBLE */
 @media (max-width: 760px) {
-    .hero {
-        height: auto;
-        padding: 22px;
-    }
+  .hero {
+    height: auto;
+    min-height: 480px; /* KLJUČNO */
+    padding: 22px;
+  }
 
-    .hero-slide {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-        gap: 16px;
-    }
+  .hero-slide {
+    position: relative; /* UMJESTO absolute */
+    inset: auto;
+  }
+  .hero-img {
+    max-height: 260px;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
 
     .hero-text {
         max-width: 100%;
@@ -430,45 +437,225 @@ footer a:hover{text-decoration:underline;}
 <main>
   <main>
 
+  <main>
+  <!-- KATALOG -->
   <section class="grid" id="catalog">
+
+    <!-- PRIMJER KARTICE (tvoje postojeće) -->
     <article class="card"
-  data-id="MODEL-ID"
+      data-id="yeezy-350-zebra"
+      data-name="Yeezy 350 Zebra"
+      data-price="120"
+      data-brand="yeezy"
+      data-sizes="37,38,39,40,41,42,43,44,45,46,47"
+      data-images='[
+        "slike/yzebra.jpeg",
+        "slike/yzebra1.jpeg",
+        "slike/yzebra2.jpeg",
+        "slike/yzebra3.jpeg"
+      ]'>
+      <div class="card-img">
+        <img src="slike/yzebra.jpeg" alt="Yeezy 350 Zebra">
+      </div>
+      <div class="badges">
+        <span class="badge badge-hot">TOP SELLER</span>
+      </div>
+      <h3>Yeezy 350 Zebra</h3>
+      <div class="meta">
+        <span class="price">120€</span>
+        <span>Dostava ~2 tj.</span>
+      </div>
+      <div class="actions">
+        <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
+        <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
+      </div>
+    </article>
+
+    <!-- DODAJ DALJE SVE OSTALE KARTICE OVDJE (article.card...) -->
+	
+	<article class="card"
+  data-id="ID-MODELA"
   data-name="IME MODELA"
   data-price="CIJENA"
-  data-brand="brand"
-  data-sizes="36,37,38,39,40,41,42,43,44,45"
+  data-brand="yeezy"
+  data-sizes="37,38,39,40,41,42,43,44"
   data-images='[
-    "slike/model-main.jpg",
-    "slike/model-1.jpg",
-    "slike/model-2.jpg",
-    "slike/model-3.jpg"
+    "slike/ime-main.jpg",
+    "slike/ime-1.jpg",
+    "slike/ime-2.jpg",
+    "slike/ime-3.jpg"
   ]'>
-
   <div class="card-img">
-    <img src="slike/model-main.jpg" alt="IME MODELA">
+    <img src="slike/ime-main.jpg" alt="IME MODELA">
   </div>
-
   <div class="badges">
     <span class="badge badge-new">NEW</span>
-    <!-- ili badge-hot / makni ako ne treba -->
   </div>
-
   <h3>IME MODELA</h3>
-
   <div class="meta">
     <span class="price">CIJENA€</span>
     <span>Dostava ~2 tj.</span>
   </div>
-
   <div class="actions">
     <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
     <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
   </div>
-
+</article>
+  
+  
+  <article class="card"
+  data-id="ID-MODELA"
+  data-name="IME MODELA"
+  data-price="CIJENA"
+  data-brand="yeezy"
+  data-sizes="37,38,39,40,41,42,43,44"
+  data-images='[
+    "slike/ime-main.jpg",
+    "slike/ime-1.jpg",
+    "slike/ime-2.jpg",
+    "slike/ime-3.jpg"
+  ]'>
+  <div class="card-img">
+    <img src="slike/ime-main.jpg" alt="IME MODELA">
+  </div>
+  <div class="badges">
+    <span class="badge badge-new">NEW</span>
+  </div>
+  <h3>IME MODELA</h3>
+  <div class="meta">
+    <span class="price">CIJENA€</span>
+    <span>Dostava ~2 tj.</span>
+  </div>
+  <div class="actions">
+    <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
+    <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
+  </div>
 </article>
 
-  </section>
 
+<article class="card"
+  data-id="ID-MODELA"
+  data-name="IME MODELA"
+  data-price="CIJENA"
+  data-brand="yeezy"
+  data-sizes="37,38,39,40,41,42,43,44"
+  data-images='[
+    "slike/ime-main.jpg",
+    "slike/ime-1.jpg",
+    "slike/ime-2.jpg",
+    "slike/ime-3.jpg"
+  ]'>
+  <div class="card-img">
+    <img src="slike/ime-main.jpg" alt="IME MODELA">
+  </div>
+  <div class="badges">
+    <span class="badge badge-new">NEW</span>
+  </div>
+  <h3>IME MODELA</h3>
+  <div class="meta">
+    <span class="price">CIJENA€</span>
+    <span>Dostava ~2 tj.</span>
+  </div>
+  <div class="actions">
+    <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
+    <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
+  </div>
+</article>
+
+
+<article class="card"
+  data-id="ID-MODELA"
+  data-name="IME MODELA"
+  data-price="CIJENA"
+  data-brand="yeezy"
+  data-sizes="37,38,39,40,41,42,43,44"
+  data-images='[
+    "slike/ime-main.jpg",
+    "slike/ime-1.jpg",
+    "slike/ime-2.jpg",
+    "slike/ime-3.jpg"
+  ]'>
+  <div class="card-img">
+    <img src="slike/ime-main.jpg" alt="IME MODELA">
+  </div>
+  <div class="badges">
+    <span class="badge badge-new">NEW</span>
+  </div>
+  <h3>IME MODELA</h3>
+  <div class="meta">
+    <span class="price">CIJENA€</span>
+    <span>Dostava ~2 tj.</span>
+  </div>
+  <div class="actions">
+    <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
+    <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
+  </div>
+</article>
+
+
+<article class="card"
+  data-id="ID-MODELA"
+  data-name="IME MODELA"
+  data-price="CIJENA"
+  data-brand="yeezy"
+  data-sizes="37,38,39,40,41,42,43,44"
+  data-images='[
+    "slike/ime-main.jpg",
+    "slike/ime-1.jpg",
+    "slike/ime-2.jpg",
+    "slike/ime-3.jpg"
+  ]'>
+  <div class="card-img">
+    <img src="slike/ime-main.jpg" alt="IME MODELA">
+  </div>
+  <div class="badges">
+    <span class="badge badge-new">NEW</span>
+  </div>
+  <h3>IME MODELA</h3>
+  <div class="meta">
+    <span class="price">CIJENA€</span>
+    <span>Dostava ~2 tj.</span>
+  </div>
+  <div class="actions">
+    <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
+    <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
+  </div>
+</article>
+
+
+<article class="card"
+  data-id="ID-MODELA"
+  data-name="IME MODELA"
+  data-price="CIJENA"
+  data-brand="yeezy"
+  data-sizes="37,38,39,40,41,42,43,44"
+  data-images='[
+    "slike/ime-main.jpg",
+    "slike/ime-1.jpg",
+    "slike/ime-2.jpg",
+    "slike/ime-3.jpg"
+  ]'>
+  <div class="card-img">
+    <img src="slike/ime-main.jpg" alt="IME MODELA">
+  </div>
+  <div class="badges">
+    <span class="badge badge-new">NEW</span>
+  </div>
+  <h3>IME MODELA</h3>
+  <div class="meta">
+    <span class="price">CIJENA€</span>
+    <span>Dostava ~2 tj.</span>
+  </div>
+  <div class="actions">
+    <button class="btn btn-order" onclick="openOrder(this)">Naruči</button>
+    <button class="btn btn-info" onclick="openDetail(this)">Detalji</button>
+  </div>
+</article>
+
+
+  </section><!-- ✅ OVO TI JE FALILO: zatvaranje kataloga -->
+
+  <!-- ZAŠTO CRO.KICKS -->
   <section class="why">
     <div class="why-card">
       <div class="why-title">Slike para prije slanja</div>
@@ -491,6 +678,8 @@ footer a:hover{text-decoration:underline;}
       </div>
     </div>
   </section>
+</main>
+
 
 </main>
 
@@ -569,7 +758,7 @@ footer a:hover{text-decoration:underline;}
 
       <div class="detail-right">
         <div class="detail-price" id="detailPrice"></div>
-        <div class="detail-meta">Dostava ~2 tjedna • Slike para prije slanja na zahtjev</div>
+        <div class="detail-meta">Dostava ~2 tjedna • Slike tenisica prije slanja na zahtjev</div>
 
         <div class="detail-section-title">Dostupne veličine</div>
         <div class="sizes" id="detailSizes"></div>
@@ -579,8 +768,7 @@ footer a:hover{text-decoration:underline;}
           Za ovaj model imamo više slika (uključujući slike od dobavljača). Pošalji poruku za dodatne reference.
         </div>
 
-        <div class="detail-section-title">Preporučeni modeli</div>
-        <div class="detail-recs" id="detailRecs"></div>
+        
 
         <div class="detail-section-title">Recenzije kupaca</div>
         <div class="detail-reviews">
